@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://xnccjrg8bs3e"]
+
+[sub_resource type="TileSet" id="TileSet_7dx6r"]
+tile_size = Vector2i(32, 32)
+
+[node name="Main" type="Node2D" unique_id=1687869042]
+
+[node name="Grass" type="TileMapLayer" parent="." unique_id=1362681424]
+tile_set = SubResource("TileSet_7dx6r")

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://blahnipxh1tdr"]
+
+[ext_resource type="Script" uid="uid://qliqj8e6svqv" path="res://scripts/event_trigger.gd" id="1_ei0lj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nasix"]
+size = Vector2(14, 14)
+
+[node name="EventTrigger" type="Area2D" unique_id=1614638831]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_ei0lj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1167543568]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_nasix")
+debug_color = Color(0.9784742, 0, 0.39966747, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

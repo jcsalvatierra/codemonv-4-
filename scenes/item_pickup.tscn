@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ojggqa4yq72n"]
+
+[ext_resource type="Texture2D" uid="uid://brw2iijw1opa5" path="res://assets/OpenmonItemIcons.png" id="1_lgqak"]
+[ext_resource type="Script" uid="uid://bfsi1ujpjxg7j" path="res://scripts/item_pickup.gd" id="1_yiukj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nasix"]
+size = Vector2(14, 14)
+
+[node name="ItemPickup" type="StaticBody2D" unique_id=194447281]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_yiukj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=179990535]
+position = Vector2(8, 8)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_lgqak")
+region_enabled = true
+region_rect = Rect2(32, 128, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1292426991]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_nasix")
+debug_color = Color(0.75425947, 0.45710456, 7.70092e-07, 0.41960785)

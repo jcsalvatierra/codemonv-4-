@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestData" format=3 uid="uid://canr5gehy128e"]
+
+[ext_resource type="Script" uid="uid://dgu0alu3r0m21" path="res://scripts/quest_data.gd" id="1_3bjo5"]
+
+[resource]
+script = ExtResource("1_3bjo5")
+quest_id = "pre_boss"
+required_kills = 5
+reward_micro_event = "end_pre_boss"
+metadata/_custom_type_script = "uid://dgu0alu3r0m21"

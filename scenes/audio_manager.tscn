@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b3eyjx1jk2kx4"]
+
+[ext_resource type="Script" uid="uid://c2y2ilsfmviu7" path="res://scripts/AudioManager.gd" id="1_ujhup"]
+[ext_resource type="AudioStream" uid="uid://cfuavscqglti2" path="res://assets/audio/bgm/main_menu.mp3" id="2_064dn"]
+[ext_resource type="AudioStream" uid="uid://b0gbkjxgsc7fd" path="res://assets/audio/bgm/world_exploration.mp3" id="3_ic5jq"]
+[ext_resource type="AudioStream" uid="uid://bgfhlpoonxpe2" path="res://assets/audio/bgm/battle.mp3" id="4_if78k"]
+[ext_resource type="AudioStream" uid="uid://du2ppixck6o3n" path="res://assets/audio/bgm/boss.mp3" id="5_8igv3"]
+[ext_resource type="AudioStream" uid="uid://bi0q1lp7msok8" path="res://assets/audio/bgm/victory.mp3" id="6_2y2jw"]
+[ext_resource type="AudioStream" uid="uid://bl3tl7r7qpmeh" path="res://assets/audio/bgm/game_over.mp3" id="7_2y5yn"]
+[ext_resource type="AudioStream" uid="uid://ccglpqibr36a2" path="res://assets/audio/sfx/correct.mp3" id="8_oucy0"]
+[ext_resource type="AudioStream" uid="uid://bj214gu6ehgo3" path="res://assets/audio/sfx/wrong.mp3" id="9_cuol6"]
+[ext_resource type="AudioStream" uid="uid://dwh0fubinwxwf" path="res://assets/audio/sfx/beep.mp3" id="10_ic5jq"]
+[ext_resource type="AudioStream" uid="uid://c6fkmblmvjre7" path="res://assets/audio/sfx/door.mp3" id="11_8igv3"]
+[ext_resource type="AudioStream" uid="uid://cc2s157ejwb1a" path="res://assets/audio/sfx/item.mp3" id="11_if78k"]
+
+[node name="AudioManager" type="Node2D" unique_id=157631284]
+script = ExtResource("1_ujhup")
+bgm_main_menu = ExtResource("2_064dn")
+bgm_world_exploration = ExtResource("3_ic5jq")
+bgm_battle = ExtResource("4_if78k")
+bgm_boss = ExtResource("5_8igv3")
+bgm_victory = ExtResource("6_2y2jw")
+bgm_game_over = ExtResource("7_2y5yn")
+sfx_battle_choice_hover = ExtResource("10_ic5jq")
+sfx_battle_choice_select = ExtResource("10_ic5jq")
+sfx_question_correct = ExtResource("8_oucy0")
+sfx_question_wrong = ExtResource("9_cuol6")
+sfx_door_enter = ExtResource("11_8igv3")
+sfx_dialogue_interact = ExtResource("10_ic5jq")
+sfx_item_obtained = ExtResource("11_if78k")
+sfx_ui_click = ExtResource("10_ic5jq")
+duck_reduction_db = 20.0

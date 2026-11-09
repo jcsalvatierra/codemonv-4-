@@ -1,0 +1,6 @@
+~ correct
+COMPILE SUCCESS! Bug squashed!
+=> END
+~ wrong
+SYNTAX ERROR! You took damage!
+=> END

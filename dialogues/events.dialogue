@@ -1,0 +1,125 @@
+~ path_blocked_1
+Pedro: Hindi ka pa pwede dumaan diyan! Hinahanap ka ni [color=red]Team Leader[/color].
+Pedro: Pumunta ka muna sa lab, baka mag-crash yung buong system natin pag di mo siya kinausap!
+=> END
+
+~ path_blocked_2
+Juan: [color=red][WARNING][/color] Area Restricted. Unresolved Alpha Glitch activity detected. 
+Juan: Please see [color=red]Team Leader[/color] for clearance.
+=> END
+
+~ intro_dialogue
+Pedro: Huy! Kanina pa kita hinahanap. Nagkakagulo na sa lab!
+Pedro: May nakawalang mga Alpha Glitches sa system natin. Sinisira nila yung codes ng town!
+Pedro: Kailangan ka daw kausapin ni [color=red]Team Leader[/color] ngayon din, bilisan mo!
+=> END
+
+~ leader_intro
+Leader: Mabuti nandito ka na. May malaking problema tayo—nakawala ang mga Alpha Glitches!
+Leader: Isang malaking logic error ang nag-cause nito. Kailangan nating i-contain ang mga bug!
+Leader: Tara na need na natin silang hanapin at i-contain isa-isa!
+=> END
+
+~ errand_1
+Pedro: Uy pre, bago ka sumabak, pwede bang favor? 
+Pedro: Kailangan ko ng kape para makapag-code nang maayos. Kaso may nagkalat na mga Glitches sa damuhan papunta dun sa Coffee Bean plant.
+Pedro: Pwede makikikuha naman ng [color=green]Coffee Bean[/color] at paki-debug na rin ng 4 Alpha Glitches sa daan? Laking tulong nun!
+=> END
+
+~ errand_1_replay
+Pedro: Nakuha mo na ba yung [color=green]Coffee Bean[/color]? 
+Pedro: Mag-ingat ka sa mga Alpha Glitches diyan sa matataas na damo ah.
+=> END
+
+~ errand_1_complete
+Pedro: Ayun! Kape! The best ka talaga. 
+Pedro: Na-squash mo rin ba yung mga bugs? Ayos! Zero errors, zero warnings!
+=> END
+
+~ errand_1_post
+Pedro: Buhay na ulit ang diwa ko dahil sa kape. Sige na, tuloy mo na mission mo. Happy debugging!
+=> END
+
+~ found_coffee_bean
+System: Nakapulot ka ng [color=green]Premium Coffee Bean[/color]! 
+=> END
+
+~ meet_the_merchant
+Juan: Nga pala, may nakita akong naglalako ng tech items dun sa kabilang path. 
+Juan: Baka makatulong siya sa pagde-debug mo. Puntahan mo kaya?
+=> END
+
+~ merchant_call
+Merchant: Psst! Programmer! Dito, bilis!
+=> END 
+
+~ found_tech
+System: You found [color=blue]Lost Tech Part[/color]!
+=> END
+
+~ merchant_block
+Mechant: 'Wag ka namang snob! Grabe ka. Tinawag ngani!
+=> END
+
+~ merchant_intro
+Merchant: Buti dumaan ka! Tumakas ako kanina sa mga Alpha Glitches at nalaglag ko yung tatlong [color=blue]Tech Parts[/color] ko diyan sa malapit.
+Merchant: Kung makukuha mo yun at makakapag-debug ka ng 5 Alpha Glitches, babayaran kita... basta! Please!
+=> END
+
+~ merchant_waiting
+Merchant: Wala pa yung 3 [color=blue]Tech Parts[/color] ko? 
+Merchant: Naku, baka na-corrupt na yun sa labas. Hanapin mo na please!
+=> END
+
+~ merchant_thanks
+Merchant: Nice one! Maraming salamat. Safe na ulit ang paninda ko. 
+Merchant: Yung bayad pwedeng sa katapusan na lang? Hehehe...
+=> END
+
+~ merchant_post_quest
+Merchant: Salamat ulit! Sa katapusan na ha hehehe...
+=> END
+
+~ help
+Pedro: TULOOONG!!! May mga Alpha Glitches na sa town mismo!!!!
+=> END
+
+~ pre_boss_intro
+Pedro: Huy! Nasa loob na sila ng town proper! 
+Pedro: Kailangan mong malinis yung limang malalaking bugs dito bago nila ma-corrupt yung buong memory natin. 
+Pedro: Pag na-clear mo na, balikan mo ko agad dito!
+=> END
+
+~ pre_boss_ended
+Pedro: Whew! Na-debug mo lahat? Galing! Sige na ako na bahala dito. Check mo si Boss dun at parang may commotion!
+=> END
+
+~ pre_boss_post
+Pedro: Sige naaa! Ako na bahala maglinis ng kalat! Puntahan mo na si Boss!
+=> END
+
+~ boss_notif
+Juan: HOYYYYY! Pinasok ng Giant Alpha Glitch ang main lab! 
+Juan: Kinakalaban na ni Leader pero di niya kaya mag-isa ang dami ng syntax errors! Kailangan ka na niya!
+=> END
+
+~ boss_notif_replay
+Pedro: Ano pang hinihintay mo?! Nasa loob na siya ng Lab, tulungan mo na!
+=> END
+
+~ boss_intro
+Leader: Mabuti nandito ka na! Masyadong complex ang errors ng Glitch na 'to! 
+Leader: Hindi ko ma-compile mag-isa. Magtulungan tayo, i-debug natin 'to bago mawasak ang buong server!
+=> END
+
+~ post_boss
+Leader: Whoo! Compile Success! Grabe yung logic error nun ah. 
+Leader: Dahil natalo mo ang source ng mga glitches, babalik na sa normal ang buong Localhost. 
+Leader: Magaling na trabaho, Programmer. Maraming salamat!
+=> END
+
+~ finale
+Leader: *click clack* ... Compiling ...
+System: [color=green]BUILD SUCCESS. 0 Errors, 0 Warnings.[/color]
+Leader: Ang Localhost Town ay ligtas na mula sa mga Alpha Glitches! 
+=> END

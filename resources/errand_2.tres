@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="QuestData" format=3 uid="uid://4imxexh4k3dc"]
+
+[ext_resource type="Script" uid="uid://dgu0alu3r0m21" path="res://scripts/quest_data.gd" id="1_gfpio"]
+
+[resource]
+script = ExtResource("1_gfpio")
+quest_id = "quest_2"
+required_kills = 5
+target_item_id = "tech_part"
+required_items = 3
+reward_micro_event = "end_errand_2"
+metadata/_custom_type_script = "uid://dgu0alu3r0m21"

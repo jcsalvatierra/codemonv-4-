@@ -1,0 +1,90 @@
+[gd_resource type="Resource" script_class="DevCheckpointConfig" format=3 uid="uid://b4cc7i72qtfo1"]
+
+[ext_resource type="Script" uid="uid://blbxiyy06iru" path="res://scripts/dev_checkpoint.gd" id="1_rv4vu"]
+[ext_resource type="Script" uid="uid://dgu0alu3r0m21" path="res://scripts/quest_data.gd" id="2_7a8pw"]
+[ext_resource type="Script" uid="uid://dcofb87bg0vmb" path="res://scripts/dev_checkpoint_config.gd" id="3_5hcgv"]
+[ext_resource type="Resource" uid="uid://2rjyrf0en4fq" path="res://resources/errand_1.tres" id="3_506tx"]
+[ext_resource type="Resource" uid="uid://4imxexh4k3dc" path="res://resources/errand_2.tres" id="4_mcbe1"]
+[ext_resource type="Resource" uid="uid://canr5gehy128e" path="res://resources/pre_boss.tres" id="5_ppgxy"]
+
+[sub_resource type="Resource" id="Resource_506tx"]
+script = ExtResource("1_rv4vu")
+checkpoint_id = "met_npc_1"
+display_name = "Dev: met_npc_1"
+completed_events = Array[String](["met_npc_1"])
+story_phase = 1
+
+[sub_resource type="Resource" id="Resource_mcbe1"]
+script = ExtResource("1_rv4vu")
+checkpoint_id = "met_leader"
+display_name = "Dev: met_leader"
+completed_events = Array[String](["met_npc_1", "met_leader"])
+story_phase = 2
+
+[sub_resource type="Resource" id="Resource_ppgxy"]
+script = ExtResource("1_rv4vu")
+checkpoint_id = "start_errand_1"
+display_name = "Dev: start_errand_1"
+completed_events = Array[String](["met_npc_1", "met_leader", "start_errand_1"])
+story_phase = 2
+active_quest = ExtResource("3_506tx")
+
+[sub_resource type="Resource" id="Resource_t48n3"]
+script = ExtResource("1_rv4vu")
+checkpoint_id = "end_errand_1"
+display_name = "Dev: end_errand_1"
+completed_events = Array[String](["met_npc_1", "met_leader", "start_errand_1", "end_errand_1"])
+total_bugs_defeated = 4
+story_phase = 3
+completed_quests = Array[ExtResource("2_7a8pw")]([ExtResource("3_506tx")])
+
+[sub_resource type="Resource" id="Resource_b4m5l"]
+script = ExtResource("1_rv4vu")
+checkpoint_id = "pre_meet_merchant"
+display_name = "Dev: pre_meet_merchant"
+completed_events = Array[String](["met_npc_1", "met_leader", "start_errand_1", "end_errand_1", "pre_meet_merchant"])
+total_bugs_defeated = 4
+story_phase = 4
+completed_quests = Array[ExtResource("2_7a8pw")]([ExtResource("3_506tx")])
+
+[sub_resource type="Resource" id="Resource_4tu3b"]
+script = ExtResource("1_rv4vu")
+checkpoint_id = "start_errand_2"
+display_name = "Dev: start_errand_2"
+completed_events = Array[String](["met_npc_1", "met_leader", "start_errand_1", "end_errand_1", "pre_meet_merchant", "start_errand_2"])
+total_bugs_defeated = 4
+story_phase = 4
+active_quest = ExtResource("4_mcbe1")
+completed_quests = Array[ExtResource("2_7a8pw")]([ExtResource("3_506tx")])
+
+[sub_resource type="Resource" id="Resource_7mkht"]
+script = ExtResource("1_rv4vu")
+checkpoint_id = "end_errand_2"
+display_name = "Dev: end_errand_2"
+completed_events = Array[String](["met_npc_1", "met_leader", "start_errand_1", "end_errand_1", "pre_meet_merchant", "start_errand_2", "end_errand_2"])
+total_bugs_defeated = 9
+story_phase = 5
+completed_quests = Array[ExtResource("2_7a8pw")]([ExtResource("3_506tx"), ExtResource("4_mcbe1")])
+
+[sub_resource type="Resource" id="Resource_ys0e8"]
+script = ExtResource("1_rv4vu")
+checkpoint_id = "start_pre_boss"
+display_name = "Dev: start_pre_boss"
+completed_events = Array[String](["met_npc_1", "met_leader", "start_errand_1", "end_errand_1", "pre_meet_merchant", "start_errand_2", "end_errand_2", "start_pre_boss"])
+total_bugs_defeated = 9
+story_phase = 6
+active_quest = ExtResource("5_ppgxy")
+completed_quests = Array[ExtResource("2_7a8pw")]([ExtResource("3_506tx"), ExtResource("4_mcbe1")])
+
+[sub_resource type="Resource" id="Resource_v4wlx"]
+script = ExtResource("1_rv4vu")
+checkpoint_id = "end_pre_boss"
+display_name = "Dev: end_pre_boss"
+completed_events = Array[String](["met_npc_1", "met_leader", "start_errand_1", "end_errand_1", "pre_meet_merchant", "start_errand_2", "end_errand_2", "start_pre_boss", "end_pre_boss"])
+total_bugs_defeated = 14
+story_phase = 6
+completed_quests = Array[ExtResource("2_7a8pw")]([ExtResource("3_506tx"), ExtResource("4_mcbe1"), ExtResource("5_ppgxy")])
+
+[resource]
+script = ExtResource("3_5hcgv")
+checkpoints = Array[ExtResource("1_rv4vu")]([SubResource("Resource_506tx"), SubResource("Resource_mcbe1"), SubResource("Resource_ppgxy"), SubResource("Resource_t48n3"), SubResource("Resource_b4m5l"), SubResource("Resource_4tu3b"), SubResource("Resource_7mkht"), SubResource("Resource_ys0e8"), SubResource("Resource_v4wlx")])

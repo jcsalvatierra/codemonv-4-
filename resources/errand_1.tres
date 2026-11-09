@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuestData" format=3 uid="uid://2rjyrf0en4fq"]
+
+[ext_resource type="Script" uid="uid://dgu0alu3r0m21" path="res://scripts/quest_data.gd" id="1_75rqg"]
+
+[resource]
+script = ExtResource("1_75rqg")
+required_kills = 4
+target_item_id = "coffee_bean"
+required_items = 1
+reward_micro_event = "end_errand_1"
+metadata/_custom_type_script = "uid://dgu0alu3r0m21"

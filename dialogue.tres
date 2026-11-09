@@ -1,0 +1,72 @@
+[gd_resource type="Theme" format=3 uid="uid://ddctuns77ftxd"]
+
+[ext_resource type="StyleBox" uid="uid://cqusr8p6wwgnc" path="res://dialogue_box.tres" id="1_14ixi"]
+[ext_resource type="FontFile" uid="uid://5sw8ghgd0ytf" path="res://assets/fonts/pokemon-emerald.otf" id="1_shovw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxp0s"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.9999996, 0.0910949, 0.25732988, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vhx8n"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.858004, 0.9540711, 0.86539686, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.3882353, 0.60784316, 0.41568628, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14ixi"]
+bg_color = Color(0.3882353, 0.60784316, 0.41568628, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yoj5h"]
+bg_color = Color(0.6368923, 0.8584201, 0.6600464, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aj7qo"]
+content_margin_left = 2.0
+content_margin_right = 2.0
+bg_color = Color(0.16104981, 0.2801324, 0.17666417, 1)
+
+[resource]
+default_font = ExtResource("1_shovw")
+default_font_size = 16
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/styles/disabled = ExtResource("1_14ixi")
+Button/styles/focus = SubResource("StyleBoxFlat_qxp0s")
+Button/styles/hover = SubResource("StyleBoxFlat_qxp0s")
+Button/styles/normal = ExtResource("1_14ixi")
+Button/styles/pressed = SubResource("StyleBoxFlat_vhx8n")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_14ixi")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_yoj5h")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_14ixi")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_aj7qo")

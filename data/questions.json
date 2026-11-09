@@ -1,0 +1,782 @@
+{
+  "1": [
+	{
+	  "language": "Python",
+	  "code": "print(\"Hello World\"\n\n# SyntaxError: unexpected EOF while parsing",
+	  "correct": "Missing closing parenthesis ')'",
+	  "wrong": [
+		"Missing semicolon ';'",
+		"Missing colon ':'",
+		"print must be capitalized"
+	  ]
+	},
+	{
+	  "language": "C",
+	  "code": "int main() {\n    printf(\"Hello World\")\n    return 0;\n}",
+	  "correct": "Missing semicolon ';' after printf",
+	  "wrong": [
+		"printf is not defined",
+		"main cannot return 0",
+		"Double quotes are invalid"
+	  ]
+	},
+	{
+	  "language": "C++",
+	  "code": "int main() {\n    int a = 10\n    int b = 20;\n    return 0;\n}",
+	  "correct": "Missing semicolon ';' after 'int a = 10'",
+	  "wrong": [
+		"main cannot return 0",
+		"Variable a is uninitialized",
+		"Invalid type int"
+	  ]
+	},
+	{
+	  "language": "Python",
+	  "code": "x = 10\nif x > 5\n    print(\"Greater\")",
+	  "correct": "Missing colon ':' after if condition",
+	  "wrong": [
+		"Missing semicolon",
+		"x is undefined",
+		"Indentation is illegal"
+	  ]
+	},
+	{
+	  "language": "C++",
+	  "code": "int x = 5;\ncout << \"Value: \" << x << endl;\n// Compiler error: 'cout' was not declared in this scope",
+	  "correct": "Missing 'using namespace std;' or 'std::cout'",
+	  "wrong": [
+		"cout requires parentheses",
+		"endl is not valid in C++",
+		"Variable x must be a string"
+	  ]
+	}
+  ],
+  "2": [
+	{
+	  "language": "Python",
+	  "code": "age = \"20\"\nnext_year = age + 1",
+	  "correct": "TypeError: cannot concatenate 'str' and 'int'",
+	  "wrong": [
+		"ValueError: invalid literal",
+		"SyntaxError: unexpected token",
+		"NameError: age is undefined"
+	  ]
+	},
+	{
+	  "language": "C",
+	  "code": "int x = 10;\nif (x = 5) {\n    printf(\"Equal\");\n}\n// Why does this always evaluate to true?",
+	  "correct": "Uses assignment operator '=' instead of equality '=='",
+	  "wrong": [
+		"x cannot be compared to 5",
+		"Missing semicolon in if condition",
+		"Condition requires curly brackets"
+	  ]
+	},
+	{
+	  "language": "C",
+	  "code": "int a = 7;\nint b = 2;\nfloat result = a / b;\nprintf(\"%.1f\", result); // Output: 3.0",
+	  "correct": "Integer division truncates decimals before assigning to float",
+	  "wrong": [
+		"Compilation error: incompatible types",
+		"Division by zero exception",
+		"Modulo operator required"
+	  ]
+	},
+	{
+	  "language": "Python",
+	  "code": "is_active = True\nif is_active == true:\n    print(\"Online\")",
+	  "correct": "NameError: 'true' is not defined (Python uses capital 'True')",
+	  "wrong": [
+		"Boolean comparison is not allowed in if",
+		"Missing colon",
+		"is_active is null"
+	  ]
+	},
+	{
+	  "language": "C++",
+	  "code": "int a = 14;\nint remainder = a % 5;\n// What is the value of remainder?",
+	  "correct": "4",
+	  "wrong": [
+		"2",
+		"5",
+		"0"
+	  ]
+	}
+  ],
+  "3": [
+	{
+	  "language": "C",
+	  "code": "char s1[] = \"apple\";\nchar s2[] = \"apple\";\nif (s1 == s2) {\n    printf(\"Same\");\n} else {\n    printf(\"Different\");\n}",
+	  "correct": "Prints 'Different' ('==' compares memory addresses, not string contents)",
+	  "wrong": [
+		"Prints 'Same'",
+		"Compilation error",
+		"Segmentation fault"
+	  ]
+	},
+	{
+	  "language": "C",
+	  "code": "int choice = 1;\nswitch (choice) {\n    case 1: printf(\"One \");\n    case 2: printf(\"Two \");\n    default: printf(\"Done\");\n}",
+	  "correct": "Prints 'One Two Done' due to missing break statements",
+	  "wrong": [
+		"Prints 'One ' only",
+		"Compilation error: missing breaks",
+		"Prints 'Done' only"
+	  ]
+	},
+	{
+	  "language": "Python",
+	  "code": "score = 85\nif score >= 90 and <= 100:\n    print(\"A\")",
+	  "correct": "SyntaxError: condition after 'and' must specify variable ('score <= 100')",
+	  "wrong": [
+		"Missing colon",
+		"and operator is not supported in Python",
+		"Score is out of range"
+	  ]
+	},
+	{
+	  "language": "C++",
+	  "code": "int x = 10;\nif (x > 5)\n    cout << \"A\";\n    cout << \"B\";\n// What prints when x = 3?",
+	  "correct": "Prints 'B' (only the first line belongs to the if without braces)",
+	  "wrong": [
+		"Prints nothing",
+		"Prints 'A' and 'B'",
+		"Compilation error"
+	  ]
+	},
+	{
+	  "language": "C",
+	  "code": "int age = 15;\nif (age >= 18 || age < 13) {\n    printf(\"Not a teen\");\n} else {\n    printf(\"Teenager\");\n}",
+	  "correct": "Prints 'Teenager' (15 is neither >= 18 nor < 13)",
+	  "wrong": [
+		"Prints 'Not a teen'",
+		"Syntax error with || operator",
+		"Infinite loop"
+	  ]
+	}
+  ],
+  "4": [
+	{
+	  "language": "Python",
+	  "code": "for i in range(1, 5):\n    print(i, end=\" \")\n# What is the output?",
+	  "correct": "1 2 3 4 (stop value in range is exclusive)",
+	  "wrong": [
+		"1 2 3 4 5",
+		"0 1 2 3 4",
+		"1 3 5"
+	  ]
+	},
+	{
+	  "language": "C",
+	  "code": "int i = 0;\nwhile (i < 5) {\n    printf(\"%d \", i);\n}\n// What happens when this program runs?",
+	  "correct": "Infinite loop because 'i' is never incremented inside the loop",
+	  "wrong": [
+		"Prints 0 1 2 3 4",
+		"Prints 0 then stops",
+		"Compilation error"
+	  ]
+	},
+	{
+	  "language": "C++",
+	  "code": "for (int i = 0; i <= 5; i++) {\n    if (i == 3) continue;\n    cout << i << \" \";\n}",
+	  "correct": "0 1 2 4 5 (skips 3 and continues loop)",
+	  "wrong": [
+		"0 1 2 (stops loop at 3)",
+		"0 1 2 3 4 5",
+		"1 2 4 5"
+	  ]
+	},
+	{
+	  "language": "C",
+	  "code": "int count = 10;\ndo {\n    printf(\"%d\", count);\n} while (count < 5);",
+	  "correct": "Prints 10 once (do-while always executes body at least once)",
+	  "wrong": [
+		"Prints nothing",
+		"Infinite loop",
+		"Compilation error"
+	  ]
+	},
+	{
+	  "language": "Python",
+	  "code": "numbers = [10, 20, 30]\ntotal = 0\nfor n in numbers:\n    total += n\n# What is total?",
+	  "correct": "60",
+	  "wrong": [
+		"30",
+		"0",
+		"[10, 20, 30]"
+	  ]
+	}
+  ],
+  "5": [
+	{
+	  "language": "C",
+	  "code": "int arr[3] = {10, 20, 30};\n// What are the valid index bounds for this array?",
+	  "correct": "0 to 2 (indices are 0, 1, and 2)",
+	  "wrong": [
+		"1 to 3",
+		"0 to 3",
+		"1 to 2"
+	  ]
+	},
+	{
+	  "language": "Python",
+	  "code": "items = [\"apple\", \"banana\", \"cherry\"]\nprint(items[-1])",
+	  "correct": "Prints 'cherry' (negative index -1 accesses the last element)",
+	  "wrong": [
+		"IndexError: list index out of range",
+		"Prints 'apple'",
+		"Prints 'banana'"
+	  ]
+	},
+	{
+	  "language": "C++",
+	  "code": "int arr[5] = {1, 2, 3, 4, 5};\n// What is the index of the first element?",
+	  "correct": "0 (arrays are zero-indexed)",
+	  "wrong": [
+		"1",
+		"-1",
+		"5"
+	  ]
+	},
+	{
+	  "language": "Python",
+	  "code": "nums = [1, 2, 3]\nnums.append([4, 5])\n# What is len(nums)?",
+	  "correct": "4 (the list [4, 5] is appended as a single nested element)",
+	  "wrong": [
+		"5",
+		"3",
+		"TypeError"
+	  ]
+	},
+	{
+	  "language": "C",
+	  "code": "int arr[5];\nprintf(\"%d\", arr[0]);\n// Why might this print an unexpected number?",
+	  "correct": "Uninitialized local array contains garbage memory values",
+	  "wrong": [
+		"Arrays cannot be printed with %d",
+		"Arrays always default to 0 in C",
+		"Array length is missing"
+	  ]
+	}
+  ],
+  "6": [
+	{
+	  "language": "Python",
+	  "code": "def add(a, b):\n    sum = a + b\n\nresult = add(3, 4)\nprint(result)",
+	  "correct": "Prints 'None' because the function lacks a return statement",
+	  "wrong": [
+		"Prints 7",
+		"TypeError: invalid operation",
+		"NameError: sum is undefined"
+	  ]
+	},
+	{
+	  "language": "C",
+	  "code": "int square(int x) {\n    return x * x;\n}\nint main() {\n    int ans = square(4, 5);\n}",
+	  "correct": "Compilation error: too many arguments to function 'square'",
+	  "wrong": [
+		"Returns 16",
+		"Returns 20",
+		"Runtime crash"
+	  ]
+	},
+	{
+	  "language": "Python",
+	  "code": "def greet():\n    msg = \"Hello\"\ngreet()\nprint(msg)",
+	  "correct": "NameError: 'msg' is a local variable not accessible outside greet()",
+	  "wrong": [
+		"Prints 'Hello'",
+		"Prints None",
+		"SyntaxError"
+	  ]
+	},
+	{
+	  "language": "C",
+	  "code": "void doubleVal(int x) {\n    x = x * 2;\n}\nint main() {\n    int a = 5;\n    doubleVal(a);\n    printf(\"%d\", a);\n}",
+	  "correct": "Prints 5 (C passes primitive arguments by value, so 'a' is unchanged)",
+	  "wrong": [
+		"Prints 10",
+		"Compilation error",
+		"Segmentation fault"
+	  ]
+	},
+	{
+	  "language": "C++",
+	  "code": "void showMessage() {\n    return 42;\n}",
+	  "correct": "Compilation error: void function cannot return a value",
+	  "wrong": [
+		"Returns 42",
+		"Warning only, runs normally",
+		"Segmentation fault"
+	  ]
+	}
+  ],
+  "7": [
+	{
+	  "language": "Python",
+	  "code": "s = \"hello\"\ns.upper()\nprint(s)",
+	  "correct": "Prints 'hello' (strings are immutable in Python; return value was not assigned)",
+	  "wrong": [
+		"Prints 'HELLO'",
+		"AttributeError",
+		"TypeError"
+	  ]
+	},
+	{
+	  "language": "Python",
+	  "code": "num = int(\"123a\")",
+	  "correct": "ValueError: invalid literal for int() with base 10: '123a'",
+	  "wrong": [
+		"Converts to 123",
+		"TypeError: cannot convert str to int",
+		"Returns 0"
+	  ]
+	},
+	{
+	  "language": "C",
+	  "code": "char str[] = \"Cat\";\nprintf(\"%d\", strlen(str));",
+	  "correct": "3 (strlen counts characters excluding null terminator '\\0')",
+	  "wrong": [
+		"4",
+		"2",
+		"Garbage value"
+	  ]
+	},
+	{
+	  "language": "Python",
+	  "code": "s = \"Codemon\"\nprint(s[0:4])",
+	  "correct": "'Code' (slice from index 0 up to, but not including, index 4)",
+	  "wrong": [
+		"'Codem'",
+		"'ode'",
+		"'Codemon'"
+	  ]
+	},
+	{
+	  "language": "C",
+	  "code": "int *ptr = NULL;\n*ptr = 100;",
+	  "correct": "Segmentation fault due to null pointer dereference",
+	  "wrong": [
+		"Assigns 100 to ptr",
+		"Compilation error",
+		"Memory leak"
+	  ]
+	}
+  ],
+  "8": [
+	{
+	  "language": "C++",
+	  "code": "class BankAccount {\nprivate:\n    double balance = 1000;\n};\nint main() {\n    BankAccount acc;\n    cout << acc.balance;\n}",
+	  "correct": "Compilation error: 'balance' is private in BankAccount",
+	  "wrong": [
+		"Prints 1000",
+		"Segmentation fault",
+		"Prints 0"
+	  ]
+	},
+	{
+	  "language": "Python",
+	  "code": "class Dog:\n    def bark():\n        print(\"Woof\")\nd = Dog()\nd.bark()",
+	  "correct": "TypeError: bark() takes 0 arguments but 1 was given (missing 'self')",
+	  "wrong": [
+		"Prints 'Woof'",
+		"AttributeError: Dog has no method bark",
+		"SyntaxError"
+	  ]
+	},
+	{
+	  "language": "C++",
+	  "code": "class Student {\npublic:\n    Student(string name) {}\n};\nint main() {\n    Student s;\n}",
+	  "correct": "Compilation error: no default constructor available (takes 1 argument)",
+	  "wrong": [
+		"Creates student with empty name",
+		"Runtime crash",
+		"Warning only"
+	  ]
+	},
+	{
+	  "language": "C++",
+	  "code": "class Animal {\npublic:\n    void speak() { cout << \"Sound\"; }\n};\nclass Cat : public Animal {};\nCat c;\nc.speak();",
+	  "correct": "Prints 'Sound' (Cat inherits public method from Animal)",
+	  "wrong": [
+		"Compilation error: inheritance syntax invalid",
+		"Prints nothing",
+		"Access violation"
+	  ]
+	},
+	{
+	  "language": "Python",
+	  "code": "class Counter:\n    count = 0\n    def __init__(self):\n        Counter.count += 1\na = Counter()\nb = Counter()\nprint(Counter.count)",
+	  "correct": "2 (count is a class variable shared across all instances)",
+	  "wrong": [
+		"1",
+		"0",
+		"AttributeError"
+	  ]
+	}
+  ],
+  "9": [
+	{
+	  "language": "Python",
+	  "code": "stack = []\nstack.append(1)\nstack.append(2)\nstack.pop()\nprint(stack[-1])",
+	  "correct": "1 (LIFO: 2 was popped off, leaving 1 on top)",
+	  "wrong": [
+		"2",
+		"IndexError: list index out of range",
+		"None"
+	  ]
+	},
+	{
+	  "language": "C++",
+	  "code": "// Why must an array be sorted before performing Binary Search?",
+	  "correct": "Binary search relies on dividing sorted ranges in half",
+	  "wrong": [
+		"Arrays cannot store duplicates otherwise",
+		"To prevent memory leaks",
+		"Binary search only works on strings"
+	  ]
+	},
+	{
+	  "language": "C",
+	  "code": "int a = 5, b = 10;\n// Swap attempt without temporary variable:\na = b;\nb = a;\n// What are a and b?",
+	  "correct": "Both a and b are 10 (original value of a was overwritten)",
+	  "wrong": [
+		"a is 10, b is 5",
+		"Both a and b are 5",
+		"Compilation error"
+	  ]
+	},
+	{
+	  "language": "Python",
+	  "code": "def search(arr, target):\n    for x in arr:\n        if x == target:\n            return True\n        else:\n            return False\nprint(search([1, 2, 3], 3))",
+	  "correct": "Returns False prematurely on first item (else is inside loop)",
+	  "wrong": [
+		"Returns True",
+		"IndexError: list index out of range",
+		"SyntaxError"
+	  ]
+	},
+	{
+	  "language": "C++",
+	  "code": "// Queue data structure operates on which principle?",
+	  "correct": "FIFO (First-In, First-Out)",
+	  "wrong": [
+		"LIFO (Last-In, First-Out)",
+		"FILO (First-In, Last-Out)",
+		"Random Access"
+	  ]
+	}
+  ],
+  "10": [
+	{
+	  "language": "Python",
+	  "code": "data = {\"a\": 1, \"b\": 2}\nprint(data.get(\"c\", 0))",
+	  "correct": "0 (fallback default value returned without raising KeyError)",
+	  "wrong": [
+		"KeyError: 'c'",
+		"None",
+		"SyntaxError: invalid get syntax"
+	  ]
+	},
+	{
+	  "language": "C",
+	  "code": "int x = 42;\nint *ptr = &x;\n*ptr = 99;\nprintf(\"%d\", x);",
+	  "correct": "99 (modifying through pointer updates original variable x)",
+	  "wrong": [
+		"42 (x was not directly modified)",
+		"Address of x in memory",
+		"Compilation error: invalid indirection"
+	  ]
+	},
+	{
+	  "language": "C++",
+	  "code": "std::vector<int> v = {10, 20};\nv.push_back(30);\nstd::cout << v.size();",
+	  "correct": "3 (vector dynamically expands when pushing elements)",
+	  "wrong": [
+		"2 (original size unchanged)",
+		"30 (returns back element)",
+		"Compilation error: push_back requires array"
+	  ]
+	},
+	{
+	  "language": "Python",
+	  "code": "text = \"CODEMON\"\nprint(text[::-1])",
+	  "correct": "\"NOMEDOC\" (slice step -1 reverses string)",
+	  "wrong": [
+		"\"CODEMON\"",
+		"IndexError: string slice out of range",
+		"\"N\" (last character only)"
+	  ]
+	},
+	{
+	  "language": "C",
+	  "code": "char word[4] = \"Code\";\n// What issue occurs with this string declaration?",
+	  "correct": "No space for null terminator '\\0' (needs buffer size of at least 5)",
+	  "wrong": [
+		"Double quotes are illegal for char arrays in C",
+		"Array size must be specified in bytes",
+		"No issue, 'Code' has exactly 4 characters"
+	  ]
+	}
+  ],
+  "11": [
+	{
+	  "language": "C",
+	  "code": "int *arr = (int*)malloc(sizeof(int) * 10);\narr = NULL;\n// What bug has just been introduced?",
+	  "correct": "Memory leak (allocated heap block cannot be freed)",
+	  "wrong": [
+		"Segmentation fault immediately",
+		"Stack overflow error",
+		"Compilation error: cannot assign NULL to pointer"
+	  ]
+	},
+	{
+	  "language": "C++",
+	  "code": "void doubleVal(int &n) { n *= 2; }\nint x = 5;\ndoubleVal(x);\nstd::cout << x;",
+	  "correct": "10 (reference parameter modifies caller's variable in-place)",
+	  "wrong": [
+		"5 (x was passed by value copy)",
+		"Compilation error on '&'",
+		"Undefined behavior"
+	  ]
+	},
+	{
+	  "language": "Python",
+	  "code": "a = [[1, 2], [3, 4]]\nb = a.copy()\nb[0][0] = 99\nprint(a[0][0])",
+	  "correct": "99 (shallow copy shares references to nested lists)",
+	  "wrong": [
+		"1 (a and b are completely independent copies)",
+		"TypeError: unhashable type",
+		"AttributeError: list has no copy method"
+	  ]
+	},
+	{
+	  "language": "C",
+	  "code": "int *p = (int*)malloc(sizeof(int));\nfree(p);\n*p = 10;",
+	  "correct": "Undefined behavior / Use-After-Free crash",
+	  "wrong": [
+		"Automatically re-allocates freed memory",
+		"Safe: p still points to previous memory",
+		"Compiler warning only, executes safely"
+	  ]
+	},
+	{
+	  "language": "C++",
+	  "code": "void show(const std::string &s) {\n    // What operation is illegal inside this function?\n}",
+	  "correct": "Modifying or reassigning the content of 's'",
+	  "wrong": [
+		"Reading the length with s.length()",
+		"Passing string literals to show()",
+		"Printing s with std::cout"
+	  ]
+	}
+  ],
+  "12": [
+	{
+	  "language": "C",
+	  "code": "void counter() {\n    static int count = 0;\n    count++;\n    printf(\"%d \", count);\n}\ncounter(); counter();",
+	  "correct": "1 2 (static variable retains value between calls)",
+	  "wrong": [
+		"1 1 (re-initialized to 0 on every call)",
+		"0 1",
+		"Compilation error: static local variable is illegal"
+	  ]
+	},
+	{
+	  "language": "Python",
+	  "code": "count = 10\ndef increment():\n    count += 1\nincrement()",
+	  "correct": "UnboundLocalError (variable referenced before assignment without global)",
+	  "wrong": [
+		"Increments count to 11",
+		"TypeError: invalid assignment",
+		"SyntaxError: invalid function syntax"
+	  ]
+	},
+	{
+	  "language": "C++",
+	  "code": "class Connection {\npublic:\n    ~Connection() { std::cout << \"Closed \"; }\n};\n{ Connection c; } std::cout << \"Done\";",
+	  "correct": "\"Closed Done\" (destructor called automatically when scope exits)",
+	  "wrong": [
+		"\"Done\" only (requires manual delete)",
+		"Compilation error: destructor must be called explicitly",
+		"Undefined behavior"
+	  ]
+	},
+	{
+	  "language": "Python",
+	  "code": "def inspect(*args, **kwargs):\n    return len(args), len(kwargs)\nprint(inspect(1, 2, mode=\"dev\"))",
+	  "correct": "(2, 1) - two positional arguments and one keyword argument",
+	  "wrong": [
+		"(3, 0)",
+		"(1, 2)",
+		"TypeError: takes 0 positional arguments"
+	  ]
+	},
+	{
+	  "language": "C",
+	  "code": "int arr[10];\n// On a 64-bit architecture where sizeof(int) is 4 bytes,\n// what is the return value of sizeof(arr)?",
+	  "correct": "40 bytes (total memory occupied by all 10 integers)",
+	  "wrong": [
+		"10 bytes",
+		"8 bytes (size of a pointer)",
+		"4 bytes (size of a single int)"
+	  ]
+	}
+  ],
+  "13": [
+	{
+	  "language": "C++",
+	  "code": "std::stack<int> s;\ns.push(1); s.push(2); s.push(3);\nstd::cout << s.top();",
+	  "correct": "3 (std::stack operates on LIFO - Last-In, First-Out principle)",
+	  "wrong": [
+		"1 (FIFO - First-In, First-Out)",
+		"2 (Middle element)",
+		"Compilation error: stack does not support top()"
+	  ]
+	},
+	{
+	  "language": "Python",
+	  "code": "a = {1, 2, 2, 3}\nb = {3, 4}\nprint(len(a & b))",
+	  "correct": "1 (set intersection contains only {3})",
+	  "wrong": [
+		"2",
+		"0",
+		"TypeError: unsupported operand type for &"
+	  ]
+	},
+	{
+	  "language": "C",
+	  "code": "struct Node { int data; struct Node *next; };\n// How do you check if 'curr' is the last node in the list?",
+	  "correct": "curr->next == NULL",
+	  "wrong": [
+		"curr == NULL",
+		"curr->data == 0",
+		"curr->next == curr"
+	  ]
+	},
+	{
+	  "language": "Python",
+	  "code": "gen = (x * 2 for x in range(3))\nprint(next(gen), next(gen))",
+	  "correct": "0 2 (generator expression computes values lazily on demand)",
+	  "wrong": [
+		"0 1",
+		"2 4",
+		"TypeError: generator object is not subscriptable"
+	  ]
+	},
+	{
+	  "language": "C++",
+	  "code": "std::map<std::string, int> scores;\nint x = scores[\"Alice\"];\n// What happens if key 'Alice' does not exist yet?",
+	  "correct": "Inserts key 'Alice' with default value 0 and returns 0",
+	  "wrong": [
+		"Throws std::out_of_range exception",
+		"Returns -1",
+		"Compilation error: key must be pre-inserted"
+	  ]
+	}
+  ],
+  "14": [
+	{
+	  "language": "Python",
+	  "code": "try:\n    x = 10 / 2\nexcept ZeroDivisionError:\n    print(\"Error \", end=\"\")\nelse:\n    print(\"Success \", end=\"\")\nfinally:\n    print(\"Done\")",
+	  "correct": "\"Success Done\" (else executes because no exception occurred)",
+	  "wrong": [
+		"\"Success\" only",
+		"\"Error Done\"",
+		"SyntaxError: else clause invalid after except"
+	  ]
+	},
+	{
+	  "language": "C",
+	  "code": "int flag = 1 << 3;\n// What is the decimal value of flag?",
+	  "correct": "8 (binary 1 shifted left 3 positions = 1000 in binary = 8)",
+	  "wrong": [
+		"3",
+		"6",
+		"13"
+	  ]
+	},
+	{
+	  "language": "C++",
+	  "code": "int a = 10;\nauto fn = [&a]() { a += 5; };\nfn();\nstd::cout << a;",
+	  "correct": "15 (lambda captures a by reference, mutating original variable)",
+	  "wrong": [
+		"10 (lambda operates on copy)",
+		"Compilation error: lambda cannot mutate variables",
+		"Undefined behavior"
+	  ]
+	},
+	{
+	  "language": "C",
+	  "code": "int nums[5];\nfor (int i = 0; i <= 5; i++) {\n    nums[i] = i;\n}",
+	  "correct": "Off-by-one buffer overflow: nums[5] accesses out of bounds",
+	  "wrong": [
+		"Loops cleanly 5 times",
+		"Infinite loop",
+		"Compilation error: <= is invalid in for loops"
+	  ]
+	},
+	{
+	  "language": "Python",
+	  "code": "res = [x for x in [1, 2, 3, 4] if x % 2 == 0]\nprint(res)",
+	  "correct": "[2, 4] (filters even numbers)",
+	  "wrong": [
+		"[1, 3]",
+		"[False, True, False, True]",
+		"SyntaxError"
+	  ]
+	}
+  ],
+  "15": [
+	{
+	  "language": "Python",
+	  "code": "def countdown(n):\n    return countdown(n - 1)\n# What happens when countdown(5) is called?",
+	  "correct": "RecursionError: maximum recursion depth exceeded (missing base case)",
+	  "wrong": [
+		"Returns 0",
+		"Returns -1",
+		"SyntaxError"
+	  ]
+	},
+	{
+	  "language": "Python",
+	  "code": "def append_item(val, my_list=[]):\n    my_list.append(val)\n    return my_list\nprint(append_item(1))\nprint(append_item(2))",
+	  "correct": "[1] then [1, 2] (default mutable list is shared across calls)",
+	  "wrong": [
+		"[1] then [2]",
+		"[1, 1] then [2, 2]",
+		"TypeError"
+	  ]
+	},
+	{
+	  "language": "C",
+	  "code": "int a = 10;\nint b = 5 - 5;\nint c = a / b;",
+	  "correct": "Division by zero runtime crash / floating point exception",
+	  "wrong": [
+		"c becomes 0",
+		"c becomes infinity",
+		"Compilation error"
+	  ]
+	},
+	{
+	  "language": "Python",
+	  "code": "matrix = [\n    [1, 2, 3],\n    [4, 5, 6]\n]\n# Which expression accesses the value 6?",
+	  "correct": "matrix[1][2] (row index 1, column index 2)",
+	  "wrong": [
+		"matrix[2][1]",
+		"matrix[1][3]",
+		"matrix[2][2]"
+	  ]
+	},
+	{
+	  "language": "C++",
+	  "code": "double a = 0.1 + 0.2;\nif (a == 0.3) {\n    cout << \"Equal\";\n} else {\n    cout << \"Not Equal\";\n}",
+	  "correct": "Prints 'Not Equal' due to floating-point precision (a ≈ 0.30000000000000004)",
+	  "wrong": [
+		"Prints 'Equal'",
+		"Compilation error",
+		"Division by zero"
+	  ]
+	}
+  ]
+}

@@ -1,0 +1,408 @@
+[gd_scene format=3 uid="uid://d37nw26m4bpvr"]
+
+[ext_resource type="Script" uid="uid://cnjoipv6rsk5p" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://chqyhts6yjs0q" path="res://assets/ui/main_menu.jpg" id="2_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://ctl4obs5i0vtg" path="res://assets/character_portrait.png" id="3_jk1qb"]
+[ext_resource type="FontFile" uid="uid://5sw8ghgd0ytf" path="res://assets/fonts/pokemon-emerald.otf" id="3_wu84c"]
+[ext_resource type="Texture2D" uid="uid://bqdwrc3umnoeu" path="res://assets/monsters/monster_10.png" id="4_5dd4i"]
+[ext_resource type="Theme" uid="uid://ddctuns77ftxd" path="res://dialogue.tres" id="4_wu84c"]
+[ext_resource type="Texture2D" uid="uid://bcmoy7ay1vmcy" path="res://assets/monsters/monster_9.png" id="5_lgwnu"]
+[ext_resource type="Texture2D" uid="uid://drv61dgjslv55" path="res://assets/monsters/monster_7.png" id="6_flqon"]
+[ext_resource type="Texture2D" uid="uid://8hgbeo6yoimg" path="res://assets/monsters/monster_4.png" id="7_rcqid"]
+[ext_resource type="Texture2D" uid="uid://dmhqbahu48b4a" path="res://assets/logo.png" id="9_5dd4i"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nasix"]
+font = ExtResource("3_wu84c")
+font_size = 65
+font_color = Color(1, 1, 0, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_idle_loop"]
+resource_name = "idle_loop"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainMenu/Monster10:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(0.5, 0.5, 1),
+"update": 0,
+"values": [Vector2(-2023.8973, -893.38245), Vector2(-2023.8973, -955), Vector2(-2023.8973, -893.38245)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainMenu/Monster9:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(0.5, 0.5, 1),
+"update": 0,
+"values": [Vector2(-2371.324, 198.52917), Vector2(-2310, 225), Vector2(-2371.324, 198.52917)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MainMenu/Monster7:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(0.5, 0.5, 1),
+"update": 0,
+"values": [Vector2(2492.6462, -794.11774), Vector2(2492.6462, -855), Vector2(2492.6462, -794.11774)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainMenu/Monster4:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(0.5, 0.5, 1),
+"update": 0,
+"values": [Vector2(-1279.4121, 1290.4409), Vector2(-1279.4121, 1235), Vector2(-1279.4121, 1290.4409)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MainMenu/CharacterPortrait:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(0.5, 0.5, 1),
+"update": 0,
+"values": [Vector2(2393.3816, 893.3821), Vector2(2393.3816, 868), Vector2(2393.3816, 893.3821)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MainMenu:position")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(0.5, 0.5, 1),
+"update": 0,
+"values": [Vector2(239.11115, 136.00002), Vector2(239.11115, 133.5), Vector2(239.11115, 136.00002)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CenterContainer/MenuBox/Logo:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0.9, 1), Color(0.94, 0.97, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CenterContainer/MenuBox/Logo:scale")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(0.5, 0.5, 1),
+"update": 0,
+"values": [Vector2(0.22, 0.22), Vector2(0.228, 0.228), Vector2(0.22, 0.22)]
+}
+
+[sub_resource type="Animation" id="Animation_intro"]
+resource_name = "intro"
+length = 4.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FlashOverlay:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 3.6, 3.98, 4.02, 4.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0.95), Color(1, 1, 1, 0.9), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainMenu:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.8, 4.02, 4.3),
+"transitions": PackedFloat32Array(0.5, 1, 0.5, 1),
+"update": 0,
+"values": [Vector2(0.092, 0.092), Vector2(0.080592595, 0.080592595), Vector2(0.0835, 0.0835), Vector2(0.080592595, 0.080592595)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MainMenu:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.98, 4.02, 4.06, 4.1, 4.14, 4.2, 4.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(239.11115, 136.00002), Vector2(239.11115, 136.00002), Vector2(244, 141), Vector2(234, 131), Vector2(242, 139), Vector2(236, 134), Vector2(240.5, 137), Vector2(239.11115, 136.00002)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainMenu/Monster10:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.9, 1.2, 3.8),
+"transitions": PackedFloat32Array(1, 0.4, 1.2, 1, 1),
+"update": 0,
+"values": [Vector2(-4750, -2600), Vector2(-4750, -2600), Vector2(-1928, -840), Vector2(-2023.8973, -893.38245), Vector2(-2023.8973, -893.38245)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MainMenu/Monster7:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.9, 1.5, 1.8, 3.8),
+"transitions": PackedFloat32Array(1, 0.4, 1.2, 1, 1),
+"update": 0,
+"values": [Vector2(5200, -2400), Vector2(5200, -2400), Vector2(2410, -750), Vector2(2492.6462, -794.11774), Vector2(2492.6462, -794.11774)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MainMenu/Monster9:position")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.6, 2.2, 2.5, 3.8),
+"transitions": PackedFloat32Array(1, 0.4, 1.2, 1, 1),
+"update": 0,
+"values": [Vector2(-5200, 198.529), Vector2(-5200, 198.529), Vector2(-2310, 210), Vector2(-2371.324, 198.52917), Vector2(-2371.324, 198.52917)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MainMenu/Monster4:position")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 2.1, 2.7, 3, 3.8),
+"transitions": PackedFloat32Array(1, 0.4, 1.2, 1, 1),
+"update": 0,
+"values": [Vector2(-1279.4121, 3800), Vector2(-1279.4121, 3800), Vector2(-1279.4121, 1240), Vector2(-1279.4121, 1290.4409), Vector2(-1279.4121, 1290.4409)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MainMenu/CharacterPortrait:position")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 2.6, 3.2, 3.5, 3.8),
+"transitions": PackedFloat32Array(1, 0.4, 1.2, 1, 1),
+"update": 0,
+"values": [Vector2(5000, 3000), Vector2(5000, 3000), Vector2(2330, 850), Vector2(2393.3816, 893.3821), Vector2(2393.3816, 893.3821)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CenterContainer/MenuBox:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 3.98, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CenterContainer/MenuBox/Logo:scale")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 3.98, 4, 4.22, 4.38, 4.55),
+"transitions": PackedFloat32Array(1, 1, 0.5, 1.5, 0.5, 1),
+"update": 0,
+"values": [Vector2(0.55, 0.55), Vector2(0.55, 0.55), Vector2(0.55, 0.55), Vector2(0.19, 0.19), Vector2(0.24, 0.24), Vector2(0.22, 0.22)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CenterContainer/MenuBox/Logo:self_modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 3.98, 4, 4.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1.8, 1.8, 1.5, 1), Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("CenterContainer/MenuBox/StartButton:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 4.05, 4.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CenterContainer/MenuBox/QuitButton:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 4.15, 4.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("CenterContainer/MenuBox/ContinueButton:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 4.1, 4.35),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_main_menu"]
+_data = {
+&"idle_loop": SubResource("Animation_idle_loop"),
+&"intro": SubResource("Animation_intro")
+}
+
+[node name="MainMenu" type="Control" unique_id=823900892]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l6cm7")
+
+[node name="MainMenu" type="Sprite2D" parent="." unique_id=1263914161]
+position = Vector2(239.11115, 136.00002)
+scale = Vector2(0.080592595, 0.080592595)
+texture = ExtResource("2_ekxnf")
+
+[node name="CharacterPortrait" type="Sprite2D" parent="MainMenu" unique_id=233314448]
+position = Vector2(2393.3816, 893.3821)
+scale = Vector2(12.408087, 12.408087)
+texture = ExtResource("3_jk1qb")
+
+[node name="Monster10" type="Sprite2D" parent="MainMenu" unique_id=861255771]
+position = Vector2(-2023.8973, -893.38245)
+scale = Vector2(12.408087, 12.408087)
+texture = ExtResource("4_5dd4i")
+
+[node name="Monster9" type="Sprite2D" parent="MainMenu" unique_id=1341919025]
+position = Vector2(-2371.324, 198.52917)
+scale = Vector2(12.408087, 12.408087)
+texture = ExtResource("5_lgwnu")
+
+[node name="Monster7" type="Sprite2D" parent="MainMenu" unique_id=1370292497]
+position = Vector2(2492.6462, -794.11774)
+scale = Vector2(12.408087, 12.408087)
+texture = ExtResource("6_flqon")
+
+[node name="Monster4" type="Sprite2D" parent="MainMenu" unique_id=754494761]
+position = Vector2(-1279.4121, 1290.4409)
+scale = Vector2(12.408087, 12.408087)
+texture = ExtResource("7_rcqid")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=689017803]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuBox" type="VBoxContainer" parent="CenterContainer" unique_id=63707326]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/MenuBox" unique_id=139111882]
+visible = false
+layout_mode = 2
+text = "< CODEMON />"
+label_settings = SubResource("LabelSettings_nasix")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Logo" type="Sprite2D" parent="CenterContainer/MenuBox" unique_id=1623547019]
+position = Vector2(68, 7)
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("9_5dd4i")
+
+[node name="Spacer" type="Control" parent="CenterContainer/MenuBox" unique_id=2122228174]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="CenterContainer/MenuBox" unique_id=662776292]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_wu84c")
+text = "Start Game"
+
+[node name="ContinueButton" type="Button" parent="CenterContainer/MenuBox" unique_id=121776554]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme = ExtResource("4_wu84c")
+theme_override_colors/font_disabled_color = Color(0.24115571, 0.24115625, 0.24115583, 0.5019608)
+text = "Continue from Checkpoint"
+
+[node name="DevModeButton" type="Button" parent="CenterContainer/MenuBox" unique_id=1473260878]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme = ExtResource("4_wu84c")
+text = "Dev Mode: [OFF]"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/MenuBox" unique_id=2101482015]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_wu84c")
+text = "Quit Game"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2089451101]
+libraries/ = SubResource("AnimationLibrary_main_menu")
+autoplay = &"intro"
+
+[node name="FlashOverlay" type="ColorRect" parent="." unique_id=1849182374]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)

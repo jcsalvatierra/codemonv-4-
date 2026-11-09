@@ -1,0 +1,302 @@
+{
+  "1": [
+	{
+	  "language": "Python",
+	  "code": "x = 5\ny = 3\nprint(x + y)",
+	  "correct": "8",
+	  "wrong": ["53", "15", "x + y"]
+	},
+	{
+	  "language": "C",
+	  "code": "int a = 10;\nint b = 4;\nprintf(\"%d\", a - b);",
+	  "correct": "6",
+	  "wrong": ["14", "40", "-6"]
+	},
+	{
+	  "language": "C++",
+	  "code": "int score = 100;\nstd::cout << score;",
+	  "correct": "100",
+	  "wrong": ["score", "0", "Compilation error"]
+	}
+  ],
+  "2": [
+	{
+	  "language": "Python",
+	  "code": "names = [\"Alice\", \"Bob\", \"Charlie\"]\nprint(len(names))",
+	  "correct": "3",
+	  "wrong": ["2", "4", "NameError"]
+	},
+	{
+	  "language": "C",
+	  "code": "int arr[3] = {10, 20, 30};\nprintf(\"%d\", arr[0]);",
+	  "correct": "10 (arrays in C are 0-indexed)",
+	  "wrong": ["20", "30", "0"]
+	},
+	{
+	  "language": "C++",
+	  "code": "bool active = true;\nif (active) {\n    std::cout << \"Running\";\n}",
+	  "correct": "Running",
+	  "wrong": ["active", "true", "Nothing"]
+	}
+  ],
+  "3": [
+	{
+	  "language": "Python",
+	  "code": "total = 0\nfor i in range(3):\n    total += i\nprint(total)",
+	  "correct": "3 (0 + 1 + 2 = 3)",
+	  "wrong": ["6", "2", "0"]
+	},
+	{
+	  "language": "C",
+	  "code": "int i = 0;\nwhile (i < 3) {\n    i++;\n}\nprintf(\"%d\", i);",
+	  "correct": "3",
+	  "wrong": ["2", "4", "0"]
+	},
+	{
+	  "language": "C++",
+	  "code": "std::string greeting = \"Hi\";\ngreeting += \"!\";\nstd::cout << greeting;",
+	  "correct": "Hi!",
+	  "wrong": ["Hi", "!", "Compilation error"]
+	}
+  ],
+  "4": [
+	{
+	  "language": "Python",
+	  "code": "def multiply(a, b):\n    return a * b\nprint(multiply(4, 5))",
+	  "correct": "20",
+	  "wrong": ["9", "45", "None"]
+	},
+	{
+	  "language": "C",
+	  "code": "int add(int a, int b) {\n    return a + b;\n}\n// in main:\nprintf(\"%d\", add(7, 3));",
+	  "correct": "10",
+	  "wrong": ["73", "21", "4"]
+	},
+	{
+	  "language": "C++",
+	  "code": "int maxVal = std::max(15, 25);\nstd::cout << maxVal;",
+	  "correct": "25",
+	  "wrong": ["15", "40", "1"]
+	}
+  ],
+  "5": [
+	{
+	  "language": "Python",
+	  "code": "is_valid = not False and True\nprint(is_valid)",
+	  "correct": "True",
+	  "wrong": ["False", "None", "SyntaxError"]
+	},
+	{
+	  "language": "C",
+	  "code": "int x = 5;\nif (x == 5 && 1) {\n    printf(\"Pass\");\n}",
+	  "correct": "Pass (non-zero is truthy in C)",
+	  "wrong": ["Fail", "5", "Compilation error"]
+	},
+	{
+	  "language": "C++",
+	  "code": "int x = 10;\nint y = 20;\nstd::cout << (x < y ? \"Less\" : \"More\");",
+	  "correct": "Less",
+	  "wrong": ["More", "10", "Compilation error"]
+	}
+  ],
+  "6": [
+	{
+	  "language": "Python",
+	  "code": "fruits = [\"apple\", \"banana\", \"cherry\"]\nprint(fruits[-1])",
+	  "correct": "cherry (negative indexing gets last element)",
+	  "wrong": ["apple", "banana", "IndexError"]
+	},
+	{
+	  "language": "C",
+	  "code": "char str[] = \"Codemon\";\nprintf(\"%c\", str[0]);",
+	  "correct": "C",
+	  "wrong": ["Codemon", "o", "Address of str"]
+	},
+	{
+	  "language": "C++",
+	  "code": "std::vector<int> nums = {1, 2, 3};\nnums.pop_back();\nstd::cout << nums.size();",
+	  "correct": "2",
+	  "wrong": ["3", "1", "0"]
+	}
+  ],
+  "7": [
+	{
+	  "language": "Python",
+	  "code": "user = {\"username\": \"neo\", \"level\": 5}\nprint(user[\"level\"])",
+	  "correct": "5",
+	  "wrong": ["neo", "username", "KeyError"]
+	},
+	{
+	  "language": "C",
+	  "code": "int val = 8;\nint *p = &val;\nprintf(\"%d\", *p);",
+	  "correct": "8 (dereferencing pointer)",
+	  "wrong": ["Address of val", "0", "Compilation error"]
+	},
+	{
+	  "language": "C++",
+	  "code": "struct Point { int x; int y; };\nPoint p = {10, 20};\nstd::cout << p.y;",
+	  "correct": "20",
+	  "wrong": ["10", "30", "Point"]
+	}
+  ],
+  "8": [
+	{
+	  "language": "Python",
+	  "code": "nums = [1, 2, 3, 4, 5]\nprint(nums[1:4])",
+	  "correct": "[2, 3, 4] (end index is exclusive)",
+	  "wrong": ["[1, 2, 3, 4]", "[2, 3]", "[1, 2, 3]"]
+	},
+	{
+	  "language": "C",
+	  "code": "int a = 5;\nint b = 2;\nfloat result = a / b;\nprintf(\"%.1f\", result);",
+	  "correct": "2.0 (integer division truncates before float conversion)",
+	  "wrong": ["2.5", "2.2", "3.0"]
+	},
+	{
+	  "language": "C++",
+	  "code": "std::string s = \"Debugger\";\nstd::cout << s.length();",
+	  "correct": "8",
+	  "wrong": ["7", "9", "sizeof(string)"]
+	}
+  ],
+  "9": [
+	{
+	  "language": "Python",
+	  "code": "def greet(name=\"Coder\"):\n    return \"Hello \" + name\nprint(greet())",
+	  "correct": "Hello Coder (uses default argument)",
+	  "wrong": ["Hello", "TypeError: missing argument", "None"]
+	},
+	{
+	  "language": "C",
+	  "code": "int count = 0;\nfor (int i = 0; i < 5; i++) {\n    if (i == 2) continue;\n    count++;\n}\nprintf(\"%d\", count);",
+	  "correct": "4 (skips iteration when i is 2)",
+	  "wrong": ["5", "2", "3"]
+	},
+	{
+	  "language": "C++",
+	  "code": "int x = 10;\nint &ref = x;\nref = 50;\nstd::cout << x;",
+	  "correct": "50 (ref is an alias for x)",
+	  "wrong": ["10", "0", "Address of x"]
+	}
+  ],
+  "10": [
+	{
+	  "language": "Python",
+	  "code": "items = [\"a\", \"b\", \"c\"]\nfor idx, item in enumerate(items):\n    if idx == 1:\n        print(item)",
+	  "correct": "b",
+	  "wrong": ["a", "c", "1"]
+	},
+	{
+	  "language": "C",
+	  "code": "int x = 15;\nint y = 4;\nprintf(\"%d\", x % y);",
+	  "correct": "3 (remainder of 15 / 4)",
+	  "wrong": ["3.75", "0", "1"]
+	},
+	{
+	  "language": "C++",
+	  "code": "std::vector<int> v = {4, 1, 3};\nsort(v.begin(), v.end());\nstd::cout << v[0];",
+	  "correct": "1",
+	  "wrong": ["4", "3", "0"]
+	}
+  ],
+  "11": [
+	{
+	  "language": "Python",
+	  "code": "words = [\"cat\", \"window\", \"def\"]\nlengths = [len(w) for w in words]\nprint(lengths)",
+	  "correct": "[3, 6, 3]",
+	  "wrong": ["[3, 3, 3]", "[1, 2, 3]", "12"]
+	},
+	{
+	  "language": "C",
+	  "code": "char str[] = \"Hi\";\nprintf(\"%lu\", sizeof(str));",
+	  "correct": "3 (includes the '\\0' null terminator)",
+	  "wrong": ["2", "1", "4"]
+	},
+	{
+	  "language": "C++",
+	  "code": "int a = 7;\nint b = a++;\nstd::cout << b << \" \" << a;",
+	  "correct": "7 8 (post-increment assigns first, then increments)",
+	  "wrong": ["8 8", "7 7", "8 7"]
+	}
+  ],
+  "12": [
+	{
+	  "language": "Python",
+	  "code": "d = {\"x\": 10, \"y\": 20}\nprint(\"z\" in d)",
+	  "correct": "False (checks keys, not values)",
+	  "wrong": ["True", "KeyError: 'z'", "None"]
+	},
+	{
+	  "language": "C",
+	  "code": "int numbers[] = {10, 20, 30};\nint *ptr = numbers;\nprintf(\"%d\", *(ptr + 1));",
+	  "correct": "20 (pointer arithmetic advances to next element)",
+	  "wrong": ["10", "11", "30"]
+	},
+	{
+	  "language": "C++",
+	  "code": "class Box {\npublic:\n    int width;\n};\nBox b; b.width = 12;\nstd::cout << b.width;",
+	  "correct": "12",
+	  "wrong": ["Box", "0", "Compilation error: private member"]
+	}
+  ],
+  "13": [
+	{
+	  "language": "Python",
+	  "code": "s = set([1, 2, 2, 3, 3, 3])\nprint(len(s))",
+	  "correct": "3 (sets contain only unique elements)",
+	  "wrong": ["6", "1", "TypeError"]
+	},
+	{
+	  "language": "C",
+	  "code": "int x = 1;\nif (x == 1 || ++x == 2) {\n    printf(\"%d\", x);\n}",
+	  "correct": "1 (short-circuit evaluation skips second operand)",
+	  "wrong": ["2", "0", "Compilation error"]
+	},
+	{
+	  "language": "C++",
+	  "code": "std::queue<int> q;\nq.push(10); q.push(20);\nstd::cout << q.front();",
+	  "correct": "10 (FIFO - First-In, First-Out)",
+	  "wrong": ["20", "2", "Compilation error"]
+	}
+  ],
+  "14": [
+	{
+	  "language": "Python",
+	  "code": "try:\n    val = int(\"abc\")\nexcept ValueError:\n    val = 0\nprint(val)",
+	  "correct": "0 (caught ValueError and set fallback)",
+	  "wrong": ["abc", "ValueError crash", "None"]
+	},
+	{
+	  "language": "C",
+	  "code": "int a = 12; // binary 1100\nint b = 10; // binary 1010\nprintf(\"%d\", a & b);",
+	  "correct": "8 (binary bitwise AND: 1000 = 8)",
+	  "wrong": ["14", "2", "22"]
+	},
+	{
+	  "language": "C++",
+	  "code": "auto sum = [](int a, int b) { return a + b; };\nstd::cout << sum(12, 8);",
+	  "correct": "20",
+	  "wrong": ["sum", "128", "Compilation error"]
+	}
+  ],
+  "15": [
+	{
+	  "language": "Python",
+	  "code": "def solve(n):\n    if n <= 1: return 1\n    return n * solve(n - 1)\nprint(solve(4))",
+	  "correct": "24 (factorial of 4: 4 * 3 * 2 * 1 = 24)",
+	  "wrong": ["10", "16", "RecursionError"]
+	},
+	{
+	  "language": "C",
+	  "code": "int x = 10;\nint *p = &x;\nint **pp = &p;\nprintf(\"%d\", **pp);",
+	  "correct": "10 (double pointer dereference)",
+	  "wrong": ["Address of p", "Address of x", "Compilation error"]
+	},
+	{
+	  "language": "C++",
+	  "code": "std::vector<int> v = {1, 2, 3};\nint sum = 0;\nfor (int n : v) sum += n;\nstd::cout << sum;",
+	  "correct": "6 (range-based for loop sums 1+2+3)",
+	  "wrong": ["3", "123", "0"]
+	}
+  ]
+}

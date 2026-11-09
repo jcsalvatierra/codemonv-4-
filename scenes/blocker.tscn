@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dawbt5qu7qqw0"]
+
+[ext_resource type="Script" uid="uid://blgetpse05sqv" path="res://scripts/blocker.gd" id="1_hamcu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nasix"]
+size = Vector2(14, 14)
+
+[node name="Blocker" type="StaticBody2D" unique_id=2036872668]
+script = ExtResource("1_hamcu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=445457146]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_nasix")
+debug_color = Color(0.9882353, 0, 0.30588236, 0.5137255)

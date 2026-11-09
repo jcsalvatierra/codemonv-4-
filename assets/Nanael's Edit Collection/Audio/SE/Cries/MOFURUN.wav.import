@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://kswx10xnmi5f"
+path="res://.godot/imported/MOFURUN.wav-969a853e630f73a7d02d55a882bce99b.sample"
+
+[deps]
+
+source_file="res://assets/Nanael's Edit Collection/Audio/SE/Cries/MOFURUN.wav"
+dest_files=["res://.godot/imported/MOFURUN.wav-969a853e630f73a7d02d55a882bce99b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

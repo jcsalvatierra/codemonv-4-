@@ -1,0 +1,322 @@
+{
+  "1": [
+	{
+	  "language": "Python",
+	  "code": "print('Hello World'\n\n# ERROR: unexpected EOF while parsing",
+	  "correct": "Missing closing parenthesis ')'",
+	  "wrong": ["Missing semicolon ';'", "Missing colon ':'", "Indentation error"]
+	},
+	{
+	  "language": "Python",
+	  "code": "x = 5\nif x == 5\n  print('Yes')",
+	  "correct": "Missing colon ':' after condition",
+	  "wrong": ["x is undefined", "Missing semicolon ';'", "print should be uppercase"]
+	},
+	{
+	  "language": "Python",
+	  "code": "def my_func()\n  return 10",
+	  "correct": "Missing colon ':' after function definition",
+	  "wrong": ["Missing return value", "Parentheses are invalid", "Indentation error"]
+	},
+	{
+	  "language": "Python",
+	  "code": "name = \"Alice\"\nprint(nam)",
+	  "correct": "NameError: name 'nam' is not defined",
+	  "wrong": ["SyntaxError: invalid syntax", "TypeError: unsupported operand", "IndentationError"]
+	},
+	{
+	  "language": "Python",
+	  "code": "total = 10 +\n      5",
+	  "correct": "Invalid syntax due to trailing operator",
+	  "wrong": ["Indentation error", "Type mismatch", "Missing variable declaration"]
+	}
+  ],
+  "2": [
+	{
+	  "language": "C",
+	  "code": "int x = 5\nprintf(\"%d\", x);",
+	  "correct": "Missing semicolon ';' after 5",
+	  "wrong": ["'x' is undefined", "Missing #include", "printf spelled wrong"]
+	},
+	{
+	  "language": "C",
+	  "code": "int main() {\n  int arr[3] = {1, 2, 3};\n  printf(\"%d\", arr[3]);\n}",
+	  "correct": "Array index out of bounds (arr[3])",
+	  "wrong": ["Missing semicolon", "Invalid pointer assignment", "Uninitialized variable"]
+	},
+	{
+	  "language": "C",
+	  "code": "float pi = 3.14\nprintf(\"%.2f\", pi);",
+	  "correct": "Missing semicolon ';' after 3.14",
+	  "wrong": ["Wrong format specifier", "pi is a reserved keyword", "Undeclared identifier"]
+	},
+	{
+	  "language": "C",
+	  "code": "char letter = 'A'\nprintf(\"%c\", letter);",
+	  "correct": "Missing semicolon ';' after 'A'",
+	  "wrong": ["Double quotes needed instead of single", "Invalid format specifier", "Undeclared variable"]
+	},
+	{
+	  "language": "C",
+	  "code": "int num\nscanf(\"%d\", &num);",
+	  "correct": "Missing semicolon ';' after num declaration",
+	  "wrong": ["Missing ampersand '&' in scanf", "Invalid format string", "Undeclared function"]
+	}
+  ],
+  "3": [
+	{
+	  "language": "C++",
+	  "code": "std::cout << \"Hello World\" < std::endl;\n\n// ERROR: invalid operands",
+	  "correct": "Typo: '<' should be '<<'",
+	  "wrong": ["Missing semicolon", "std::endl is invalid", "cout needs parentheses"]
+	},
+	{
+	  "language": "C++",
+	  "code": "int a = 10;\nstd::cout << a \n// Missing output operator",
+	  "correct": "Missing '<< std::endl' or value continuation",
+	  "wrong": ["Missing semicolon", "Undeclared variable 'a'", "Invalid namespace"]
+	},
+	{
+	  "language": "C++",
+	  "code": "class Test {\n  int x;\n};\nint main() {\n  Test obj;\n  obj.x = 10;\n}",
+	  "correct": "Member 'x' is private by default in a class",
+	  "wrong": ["Missing semicolon after class", "Object not instantiated", "Invalid member access"]
+	},
+	{
+	  "language": "C++",
+	  "code": "vector<int> v;\nv.push_back(5)",
+	  "correct": "Missing semicolon ';' at the end of statement",
+	  "wrong": ["Missing #include <vector>", "vector is not a valid type", "push_back takes two arguments"]
+	},
+	{
+	  "language": "C++",
+	  "code": "int val = 100\nstd::cout << val;",
+	  "correct": "Missing semicolon ';' after 100",
+	  "wrong": ["Missing << operator", "val is uninitialized", "std::cout is misspelled"]
+	}
+  ],
+  "4": [
+	{
+	  "language": "Python",
+	  "code": "for i in range(5)\n    print(i)",
+	  "correct": "Missing colon ':' in for loop",
+	  "wrong": ["range() takes 2 arguments", "Indentation error", "Variable i is undefined"]
+	},
+	{
+	  "language": "Python",
+	  "code": "def add(a, b):\nreturn a + b",
+	  "correct": "IndentationError: expected an indented block",
+	  "wrong": ["Missing colon in function definition", "SyntaxError: invalid syntax", "Missing return keyword"]
+	},
+	{
+	  "language": "Python",
+	  "code": "x = [1, 2, 3]\nprint(x[3])",
+	  "correct": "IndexError: list index out of range",
+	  "wrong": ["KeyError", "TypeError", "NameError"]
+	},
+	{
+	  "language": "Python",
+	  "code": "age = 20\nif age > 18:\nprint(\"Adult\")",
+	  "correct": "IndentationError: expected an indented block under if",
+	  "wrong": ["Missing colon", "SyntaxError", "TypeError"]
+	},
+	{
+	  "language": "Python",
+	  "code": "val = \"10\"\nres = val + 5",
+	  "correct": "TypeError: can only concatenate str (not \"int\") to str",
+	  "wrong": ["NameError", "SyntaxError", "ValueError"]
+	}
+  ],
+  "5": [
+	{
+	  "language": "C",
+	  "code": "void myFunction() {\n  int x = 10;\n}\n// trying to use x outside",
+	  "correct": "'x' is out of scope outside of myFunction",
+	  "wrong": ["Missing return type", "Syntax error", "Pointer mismatch"]
+	},
+	{
+	  "language": "C",
+	  "code": "int *ptr = NULL;\n*ptr = 10;",
+	  "correct": "Segmentation fault due to null pointer dereference",
+	  "wrong": ["Memory leak", "Syntax error", "Undeclared identifier"]
+	},
+	{
+	  "language": "C",
+	  "code": "int x = 10;\nint *p = x;",
+	  "correct": "Type mismatch: assigning int to int* without '&'",
+	  "wrong": ["Missing semicolon", "Undeclared variable", "Invalid pointer type"]
+	},
+	{
+	  "language": "C",
+	  "code": "while(x < 5) {\n  x++;\n}",
+	  "correct": "Use of uninitialized variable 'x'",
+	  "wrong": ["Missing loop body", "Infinite loop", "Syntax error"]
+	},
+	{
+	  "language": "C",
+	  "code": "int result = 10 / 0;",
+	  "correct": "Division by zero runtime error",
+	  "wrong": ["Syntax error", "Overflow error", "Type mismatch"]
+	}
+  ],
+  "6": [
+	{
+	  "language": "C++",
+	  "code": "int main() {\n  const int x;\n  x = 20;\n}",
+	  "correct": "Assignment of read-only variable 'x'",
+	  "wrong": ["Missing return statement", "Syntax error", "Undeclared variable"]
+	},
+	{
+	  "language": "C++",
+	  "code": "int& ref;\nint a = 10;\nref = a;",
+	  "correct": "References ('&') must be initialized when declared",
+	  "wrong": ["Invalid const qualifier", "Type mismatch", "Syntax error"]
+	},
+	{
+	  "language": "C++",
+	  "code": "delete ptr;\ndelete ptr;",
+	  "correct": "Double delete / undefined behavior",
+	  "wrong": ["Memory leak", "Compilation error", "Segmentation fault on allocation"]
+	},
+	{
+	  "language": "C++",
+	  "code": "int a = 5;\nstring s = a;",
+	  "correct": "No viable conversion from 'int' to 'string'",
+	  "wrong": ["Missing #include <string>", "Syntax error", "Undeclared variable"]
+	},
+	{
+	  "language": "C++",
+	  "code": "switch(val) {\n  case 1:\n    int x = 5;\n  case 2:\n    x = 10;\n}",
+	  "correct": "Jump to case label bypasses initialization of 'x'",
+	  "wrong": ["Missing break statement", "Duplicate case value", "Invalid switch expression"]
+	}
+  ],
+  "7": [
+	{
+	  "language": "Python",
+	  "code": "d = {'a': 1, 'b': 2}\nprint(d['c'])",
+	  "correct": "KeyError: 'c'",
+	  "wrong": ["IndexError", "TypeError", "AttributeError"]
+	},
+	{
+	  "language": "Python",
+	  "code": "class MyClass:\n    pass\nobj = MyClass()\nprint(obj.non_existent)",
+	  "correct": "AttributeError: 'MyClass' object has no attribute 'non_existent'",
+	  "wrong": ["NameError", "TypeError", "KeyError"]
+	},
+	{
+	  "language": "Python",
+	  "code": "int('abc')",
+	  "correct": "ValueError: invalid literal for int() with base 10: 'abc'",
+	  "wrong": ["TypeError", "NameError", "SyntaxError"]
+	},
+	{
+	  "language": "Python",
+	  "code": "import non_existent_module",
+	  "correct": "ModuleNotFoundError: No module named 'non_existent_module'",
+	  "wrong": ["ImportError due to syntax", "NameError", "TypeError"]
+	},
+	{
+	  "language": "Python",
+	  "code": "def recursion_test():\n    recursion_test()\nrecursion_test()",
+	  "correct": "RecursionError: maximum recursion depth exceeded",
+	  "wrong": ["MemoryError", "SystemError", "OverflowError"]
+	}
+  ],
+  "8": [
+	{
+	  "language": "C",
+	  "code": "#define SQUARE(x) x * x\nint res = SQUARE(2 + 3);",
+	  "correct": "Macro expansion issue: evaluates to 2 + 3 * 2 + 3 instead of 25",
+	  "wrong": ["Syntax error", "Division by zero", "Undeclared identifier"]
+	},
+	{
+	  "language": "C",
+	  "code": "char str[5] = \"Hello\";",
+	  "correct": "Buffer overflow: string literal too long for array size 5 (needs null terminator space)",
+	  "wrong": ["Syntax error", "Type mismatch", "Uninitialized array"]
+	},
+	{
+	  "language": "C",
+	  "code": "int *p;\n*p = 5;",
+	  "correct": "Wild pointer dereference (pointer uninitialized)",
+	  "wrong": ["Memory leak", "Syntax error", "Type mismatch"]
+	},
+	{
+	  "language": "C",
+	  "code": "FILE *f = fopen(\"test.txt\", \"r\");\nfprintf(f, \"Hello\");",
+	  "correct": "Potential null pointer dereference if file failed to open",
+	  "wrong": ["Syntax error", "Wrong file mode", "Undeclared function"]
+	},
+	{
+	  "language": "C",
+	  "code": "int x = 10;\nint y = 3;\nfloat f = x / y;",
+	  "correct": "Integer division truncation (result is 3.0 instead of 3.33)",
+	  "wrong": ["Syntax error", "Type mismatch warning only", "Division by zero"]
+	}
+  ],
+  "9": [
+	{
+	  "language": "C++",
+	  "code": "class Base {\npublic:\n    virtual ~Base() {}\n};\nclass Derived : public Base {};\nBase *b = new Base();\nDerived *d = dynamic_cast<Derived*>(b);",
+	  "correct": "dynamic_cast returns nullptr because base pointer points to a Base object, not Derived",
+	  "wrong": ["Compilation error", "Segmentation fault immediately", "Static cast violation"]
+	},
+	{
+	  "language": "C++",
+	  "code": "std::shared_ptr<Node> p1 = std::make_shared<Node>();\nstd::shared_ptr<Node> p2 = std::make_shared<Node>();\np1->next = p2;\np2->next = p1;\n// Memory leak due to cycle",
+	  "correct": "Cyclic reference preventing reference count from reaching zero",
+	  "wrong": ["Compilation error", "Dangling pointer", "Buffer overflow"]
+	},
+	{
+	  "language": "C++",
+	  "code": "int* create() {\n    int x = 10;\n    return &x;\n}\n// Returning address of local variable",
+	  "correct": "Returning address of local automatic variable (dangling pointer)",
+	  "wrong": ["Memory leak", "Syntax error", "Const violation"]
+	},
+	{
+	  "language": "C++",
+	  "code": "std::vector<int> v = {1, 2, 3};\nfor(auto it = v.begin(); it != v.end(); ++it) {\n    v.push_back(4);\n}",
+	  "correct": "Iterator invalidation due to container modification during traversal",
+	  "wrong": ["Out of bounds index", "Syntax error", "Memory leak"]
+	},
+	{
+	  "language": "C++",
+	  "code": "template <typename T>\nT getMax(T a, T b) {\n    return a > b ? a : b;\n}\n// Called with incompatible types getMax(5, 5.5);",
+	  "correct": "Ambiguous template argument deduction error",
+	  "wrong": ["Runtime exception", "Syntax error", "Linker error"]
+	}
+  ],
+  "10": [
+	{
+	  "language": "Python",
+	  "code": "# FINAL BOSS GLITCH - Python Logic Bug\nx = [1, 2, 3]\ndef modify(lst):\n    lst.append(4)\nmodify(x)\n# What is x?",
+	  "correct": "Mutable default argument / reference side-effect (x is [1, 2, 3, 4])",
+	  "wrong": ["x remains [1, 2, 3]", "NameError", "TypeError"]
+	},
+	{
+	  "language": "C",
+	  "code": "# FINAL BOSS GLITCH - C Memory Corrupt\nint main() {\n    char buffer[10];\n    gets(buffer);\n}",
+	  "correct": "Unbounded string input vulnerability (gets function is deprecated and dangerous)",
+	  "wrong": ["Syntax error", "Compile-time failure", "Memory leak"]
+	},
+	{
+	  "language": "C++",
+	  "code": "# FINAL BOSS GLITCH - C++ Polymorphic Leak\nBase *obj = new Derived();\ndelete obj;\n// Base destructor is NOT virtual!",
+	  "correct": "Undefined behavior / resource leak due to non-virtual destructor in base class",
+	  "wrong": ["Compilation error", "Safe deletion", "Double free error"]
+	},
+	{
+	  "language": "Python",
+	  "code": "# FINAL BOSS GLITCH - Scope Traps\nx = 10\ndef test():\n    print(x)\n    x = 20\ntest()",
+	  "correct": "UnboundLocalError: local variable 'x' referenced before assignment",
+	  "wrong": ["Prints 10 then changes to 20", "NameError", "SyntaxError"]
+	},
+	{
+	  "language": "C++",
+	  "code": "# FINAL BOSS GLITCH - Core Dump Master\nint main() {\n    int *p = new int(10);\n    delete p;\n    *p = 20;\n}",
+	  "correct": "Dangling pointer dereference / writing to freed memory location",
+	  "wrong": ["Memory leak", "Compile error", "Stack overflow"]
+	}
+  ]
+}

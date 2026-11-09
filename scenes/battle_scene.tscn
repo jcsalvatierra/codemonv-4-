@@ -1,0 +1,918 @@
+[gd_scene format=3 uid="uid://ciky74giadfat"]
+
+[ext_resource type="Script" uid="uid://dsmcobysg51do" path="res://scripts/battle_scene.gd" id="1_idkgt"]
+[ext_resource type="Shader" uid="uid://d2o6qvev8fck0" path="res://shaders/battle_scene_background.gdshader" id="2_8qdv8"]
+[ext_resource type="Texture2D" uid="uid://65j8epowyhoi" path="res://assets/Game Boy Advance - Pokemon Emerald - Miscellaneous - Battle Introductions.png" id="3_1i8jf"]
+[ext_resource type="Texture2D" uid="uid://b3k8jdfjeufj6" path="res://assets/monsters/monster2.png" id="3_pxwbd"]
+[ext_resource type="Theme" uid="uid://ddctuns77ftxd" path="res://dialogue.tres" id="3_rca61"]
+[ext_resource type="Texture2D" uid="uid://dg51qa6m1hvv6" path="res://assets/character_back1.png" id="5_1i8jf"]
+[ext_resource type="Texture2D" uid="uid://8ohfwoixib7" path="res://assets/ui/arena.png" id="5_rum4d"]
+[ext_resource type="Texture2D" uid="uid://th3kqr7pnn7u" path="res://assets/ui/monster_name.png" id="7_3oc74"]
+[ext_resource type="StyleBox" uid="uid://cqusr8p6wwgnc" path="res://dialogue_box.tres" id="9_3oc74"]
+[ext_resource type="Texture2D" uid="uid://bd20058dlu4ai" path="res://assets/moves/physical.png" id="9_g72on"]
+[ext_resource type="Texture2D" uid="uid://c4rwiwype0ifp" path="res://assets/moves/fire.png" id="10_tttxe"]
+[ext_resource type="Texture2D" uid="uid://u11ul8houy31" path="res://assets/character_back2.png" id="11_tttxe"]
+
+[sub_resource type="Gradient" id="Gradient_8qdv8"]
+colors = PackedColorArray(1, 1, 1, 1, 0.3882353, 0.60784316, 0.41568628, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_h8gp6"]
+gradient = SubResource("Gradient_8qdv8")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nasix"]
+shader = ExtResource("2_8qdv8")
+shader_parameter/gradient_texture = SubResource("GradientTexture1D_h8gp6")
+shader_parameter/rotation_degrees = 90.0
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_nasix"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nasix"]
+atlas = ExtResource("3_1i8jf")
+region = Rect2(2.1078548, -0.30891228, 256.19592, 50.20907)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svpld"]
+atlas = ExtResource("3_1i8jf")
+region = Rect2(2.1078548, 47.691154, 256.19592, 50.20907)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05s0e"]
+atlas = ExtResource("9_g72on")
+region = Rect2(104, 16, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ti0og"]
+atlas = ExtResource("9_g72on")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bg0yk"]
+atlas = ExtResource("9_g72on")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yt3ua"]
+atlas = ExtResource("9_g72on")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xrod"]
+atlas = ExtResource("9_g72on")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tttxe"]
+atlas = ExtResource("9_g72on")
+region = Rect2(104, 16, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0cvo"]
+atlas = ExtResource("10_tttxe")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjku2"]
+atlas = ExtResource("10_tttxe")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mjbx"]
+atlas = ExtResource("10_tttxe")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrwob"]
+atlas = ExtResource("10_tttxe")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nasix"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05s0e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ti0og")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bg0yk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yt3ua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3xrod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05s0e")
+}],
+"loop": 0,
+"name": &"monster_attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tttxe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0cvo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sjku2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mjbx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrwob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tttxe")
+}],
+"loop": 0,
+"name": &"player_attack",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_8qdv8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Flash:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackBarTop:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(480, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BlackBarBottom:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-480, 136)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainLayout/TextureRect/Splitter/Container/MonsterSprite:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 32)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MainLayout/TextureRect/Splitter/Container/PlayerSprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(78, 103.00001)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MainLayout/TextureRect/Splitter/Container/MonsterSprite:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MainLayout/TextureRect/Splitter/Container/MonsterBGSprites:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1534, -4)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MainLayout/TextureRect/Splitter/Container/PlayerBGSprites:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(482, 120)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("MainLayout/TextureRect/Splitter/Container/MonsterName:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-172, 33)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("MainLayout/TextureRect/Splitter/Container/PlayerSprite:texture")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_1i8jf")]
+}
+
+[sub_resource type="Animation" id="Animation_1i8jf"]
+resource_name = "fade_to_battle"
+length = 3.0000000000000004
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackBarTop:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -136)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackBarBottom:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 136), Vector2(0, 272)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MainLayout/TextureRect/Splitter/Container/MonsterSprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-150, 10), Vector2(-150, 10), Vector2(300, 10)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainLayout/TextureRect/Splitter/Container/PlayerSprite:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(469.93, 115), Vector2(469.93, 115), Vector2(32, 115)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MainLayout/TextureRect/Splitter/Container/MonsterSprite:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2, 2.21, 2.3666666, 2.48, 2.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.05235987755982989, 0.0, 0.05235987755982989, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MainLayout/TextureRect/Splitter/Container/PlayerBGSprites:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(550, 120), Vector2(-532.6666, 120), Vector2(-1550, 254.615)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MainLayout/TextureRect/Splitter/Container/MonsterBGSprites:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-1534, -4), Vector2(-408.0266, -4), Vector2(650, -142.605)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MainLayout/TextureRect/Splitter/Container/MonsterName:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 2, 2.3666666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-172, 5), Vector2(-172, 5), Vector2(45.22, 5)]
+}
+
+[sub_resource type="Animation" id="Animation_pxwbd"]
+resource_name = "fade_to_black"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackBarTop:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(480, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackBarBottom:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-480, 136), Vector2(0, 136)]
+}
+
+[sub_resource type="Animation" id="Animation_rca61"]
+resource_name = "flash"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Flash:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 0.36666667, 0.7, 1.0666667, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.39215687), Color(1, 1, 1, 0), Color(1, 1, 1, 0.39215687), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0gp0h"]
+resource_name = "hurt_monster"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackBarTop:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -136)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackBarBottom:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 272)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MainLayout/TextureRect/Splitter/Container/MonsterSprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.2, 1.3333334, 1.4333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(300, 10), Vector2(300, 10), Vector2(322.94, 10), Vector2(300, 10)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainLayout/TextureRect/Splitter/Container/PlayerSprite:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.43333334, 1.1, 1.2, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(32, 115), Vector2(32, 115), Vector2(8.565, 115), Vector2(73.419, 115), Vector2(32, 115)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MainLayout/TextureRect/Splitter/Container/MonsterSprite:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MainLayout/TextureRect/Splitter/Container/PlayerBGSprites:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1550, 254.615)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MainLayout/TextureRect/Splitter/Container/MonsterBGSprites:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(650, -142.605)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MainLayout/TextureRect/Splitter/Container/MonsterName:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(45.22, 5)]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("MainLayout/TextureRect/Splitter/Container/PlayerAttack")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(1.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"player_attack", 1.0, false],
+"method": &"play"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_3oc74"]
+resource_name = "hurt_player"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackBarTop:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -136)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackBarBottom:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 272)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MainLayout/TextureRect/Splitter/Container/MonsterSprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.42, 1.1, 1.28, 1.4666667, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(300, 10), Vector2(300, 10), Vector2(309.69, 10), Vector2(277.565, 10), Vector2(300, 10), Vector2(300, 10)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainLayout/TextureRect/Splitter/Container/PlayerSprite:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(32, 115)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MainLayout/TextureRect/Splitter/Container/MonsterSprite:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MainLayout/TextureRect/Splitter/Container/PlayerBGSprites:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1550, 254.615)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MainLayout/TextureRect/Splitter/Container/MonsterBGSprites:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(650, -142.605)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MainLayout/TextureRect/Splitter/Container/MonsterName:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(45.22, 5)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("MainLayout/TextureRect/Splitter/Container/PlayerSprite:texture")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1.2333333, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_1i8jf"), ExtResource("11_tttxe"), ExtResource("5_1i8jf")]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("MainLayout/TextureRect/Splitter/Container/MonsterAttack")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(1.2333333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"monster_attack", 1.0, false],
+"method": &"play"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8qdv8"]
+_data = {
+&"RESET": SubResource("Animation_8qdv8"),
+&"fade_to_battle": SubResource("Animation_1i8jf"),
+&"fade_to_black": SubResource("Animation_pxwbd"),
+&"flash": SubResource("Animation_rca61"),
+&"hurt_monster": SubResource("Animation_0gp0h"),
+&"hurt_player": SubResource("Animation_3oc74")
+}
+
+[node name="BattleScene" type="CanvasLayer" unique_id=2129317100]
+script = ExtResource("1_idkgt")
+
+[node name="MainLayout" type="Control" parent="." unique_id=880386923]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MainLayout" unique_id=1064163760]
+material = SubResource("ShaderMaterial_nasix")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_nasix")
+
+[node name="Splitter" type="VBoxContainer" parent="MainLayout/TextureRect" unique_id=1925301715]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="Container" type="Control" parent="MainLayout/TextureRect/Splitter" unique_id=434244237]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MonsterBGSprites" type="Control" parent="MainLayout/TextureRect/Splitter/Container" unique_id=1550059307]
+anchors_preset = 0
+offset_left = -1534.0
+offset_top = -4.0
+offset_right = -1494.0
+offset_bottom = 36.0
+
+[node name="MonsterBG" type="TextureRect" parent="MainLayout/TextureRect/Splitter/Container/MonsterBGSprites" unique_id=222830305]
+layout_mode = 0
+offset_left = -150.875
+offset_top = 1.0
+offset_right = 105.125
+offset_bottom = 51.0
+scale = Vector2(3, 3)
+texture = SubResource("AtlasTexture_nasix")
+
+[node name="MonsterBG2" type="TextureRect" parent="MainLayout/TextureRect/Splitter/Container/MonsterBGSprites" unique_id=1255398661]
+layout_mode = 0
+offset_left = 767.0
+offset_right = 1023.0
+offset_bottom = 50.0
+scale = Vector2(3, 3)
+texture = SubResource("AtlasTexture_nasix")
+
+[node name="PlayerBGSprites" type="Control" parent="MainLayout/TextureRect/Splitter/Container" unique_id=767739224]
+anchors_preset = 0
+offset_left = 482.0
+offset_top = 120.0
+offset_right = 521.99976
+offset_bottom = 160.00096
+
+[node name="PlayerBG" type="TextureRect" parent="MainLayout/TextureRect/Splitter/Container/PlayerBGSprites" unique_id=24847390]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 50.0
+scale = Vector2(3, 3)
+texture = SubResource("AtlasTexture_svpld")
+
+[node name="PlayerBG2" type="TextureRect" parent="MainLayout/TextureRect/Splitter/Container/PlayerBGSprites" unique_id=482322344]
+layout_mode = 0
+offset_left = 767.0
+offset_top = 2.0
+offset_right = 1023.0
+offset_bottom = 52.0
+scale = Vector2(3, 3)
+texture = SubResource("AtlasTexture_svpld")
+
+[node name="MonsterSprite" type="TextureRect" parent="MainLayout/TextureRect/Splitter/Container" unique_id=1049806497]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 0
+offset_top = 32.0
+offset_right = 64.00006
+offset_bottom = 96.0
+scale = Vector2(1.5, 1.5)
+size_flags_horizontal = 8
+texture = ExtResource("3_pxwbd")
+
+[node name="Sprite2D" type="Sprite2D" parent="MainLayout/TextureRect/Splitter/Container/MonsterSprite" unique_id=1176951976]
+z_index = -1
+position = Vector2(34, 57.333336)
+texture = ExtResource("5_rum4d")
+
+[node name="PlayerSprite" type="TextureRect" parent="MainLayout/TextureRect/Splitter/Container" unique_id=383925590]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 0
+offset_left = 78.0
+offset_top = 103.00001
+offset_right = 122.00001
+offset_bottom = 155.00003
+scale = Vector2(3, 3)
+texture = ExtResource("5_1i8jf")
+
+[node name="Sprite2D" type="Sprite2D" parent="MainLayout/TextureRect/Splitter/Container/PlayerSprite" unique_id=1956811836]
+z_index = -1
+position = Vector2(33, 57.666668)
+texture = ExtResource("5_rum4d")
+
+[node name="MonsterName" type="TextureRect" parent="MainLayout/TextureRect/Splitter/Container" unique_id=496506725]
+z_index = 1
+layout_mode = 0
+offset_left = -172.0
+offset_top = 33.0
+offset_right = 84.0
+offset_bottom = 113.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_3oc74")
+
+[node name="NameLbl" type="Label" parent="MainLayout/TextureRect/Splitter/Container/MonsterName" unique_id=1881636024]
+layout_mode = 0
+offset_left = 17.966663
+offset_top = 11.666667
+offset_right = 168.0
+offset_bottom = 40.666668
+theme = ExtResource("3_rca61")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "Alpha Glitch"
+text_overrun_behavior = 3
+
+[node name="LevelLbl" type="Label" parent="MainLayout/TextureRect/Splitter/Container/MonsterName" unique_id=424481308]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 168.0
+offset_top = 13.0
+offset_right = 238.0
+offset_bottom = 40.0
+theme = ExtResource("3_rca61")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Lv.1"
+horizontal_alignment = 2
+
+[node name="LanguageLbl" type="Label" parent="MainLayout/TextureRect/Splitter/Container/MonsterName" unique_id=843434448]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 17.966665
+offset_top = 38.333332
+offset_right = 185.96666
+offset_bottom = 67.33333
+theme = ExtResource("3_rca61")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "Language:    Python"
+
+[node name="MonsterAttack" type="AnimatedSprite2D" parent="MainLayout/TextureRect/Splitter/Container" unique_id=207507651]
+z_index = 4
+position = Vector2(113, 199)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_nasix")
+animation = &"player_attack"
+
+[node name="PlayerAttack" type="AnimatedSprite2D" parent="MainLayout/TextureRect/Splitter/Container" unique_id=1683583149]
+z_index = 4
+position = Vector2(342, 73)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_nasix")
+animation = &"player_attack"
+
+[node name="BottomHalf_Terminal" type="Control" parent="MainLayout/TextureRect/Splitter" unique_id=1624562602]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="QuestionContainer" type="PanelContainer" parent="MainLayout/TextureRect/Splitter/BottomHalf_Terminal" unique_id=1819425644]
+z_index = 2
+layout_mode = 0
+offset_left = 14.0
+offset_top = -92.0
+offset_right = 248.0
+offset_bottom = -14.0
+theme_override_styles/panel = ExtResource("9_3oc74")
+
+[node name="CodeQuestion" type="RichTextLabel" parent="MainLayout/TextureRect/Splitter/BottomHalf_Terminal/QuestionContainer" unique_id=858089734]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_rca61")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "int x = 5
+printf(\\\"%d\\\", x);
+
+// ERROR: expected ';' before 'printf'"
+
+[node name="AnswerButtons" type="GridContainer" parent="MainLayout/TextureRect/Splitter/BottomHalf_Terminal" unique_id=448034308]
+z_index = 8
+layout_mode = 0
+offset_left = 162.0
+offset_top = 24.0
+offset_right = 472.0
+offset_bottom = 126.0
+theme = ExtResource("3_rca61")
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+columns = 2
+
+[node name="OptionA" type="Button" parent="MainLayout/TextureRect/Splitter/BottomHalf_Terminal/AnswerButtons" unique_id=1229917575]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_rca61")
+text = "Aaaaaaaaaaaaaaaaaaadddddddddddddddddddddddddddddddddddddddddd"
+autowrap_mode = 3
+
+[node name="OptionB" type="Button" parent="MainLayout/TextureRect/Splitter/BottomHalf_Terminal/AnswerButtons" unique_id=131640020]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_rca61")
+text = "B"
+autowrap_mode = 3
+
+[node name="OptionC" type="Button" parent="MainLayout/TextureRect/Splitter/BottomHalf_Terminal/AnswerButtons" unique_id=336340049]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_rca61")
+text = "Cdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+autowrap_mode = 3
+
+[node name="OptionD" type="Button" parent="MainLayout/TextureRect/Splitter/BottomHalf_Terminal/AnswerButtons" unique_id=1584085463]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_rca61")
+text = "D"
+autowrap_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=730096395]
+libraries/ = SubResource("AnimationLibrary_8qdv8")
+
+[node name="Flash" type="ColorRect" parent="." unique_id=37675152]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="BlackBarTop" type="ColorRect" parent="." unique_id=1806021876]
+z_index = 10
+offset_left = 480.0
+offset_right = 960.0
+offset_bottom = 136.0
+color = Color(0, 0, 0, 1)
+
+[node name="BlackBarBottom" type="ColorRect" parent="." unique_id=2033524258]
+z_index = 10
+offset_left = -480.0
+offset_top = 136.0
+offset_bottom = 271.99323
+color = Color(0, 0, 0, 1)
+
+[node name="SkipButton" type="Button" parent="." unique_id=1139603398]
+unique_name_in_owner = true
+offset_left = 372.0
+offset_top = 6.0
+offset_right = 442.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 16
+text = "Skip >"
